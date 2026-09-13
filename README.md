@@ -1,2 +1,2 @@
 # my-website
-#### In progress (┬┬﹏┬┬)
+#### visit my website here! https://aerennic.github.io/my-website/ (´▽`ʃ♡ƪ)
