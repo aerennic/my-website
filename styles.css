@@ -31,14 +31,9 @@ button {
 }
 
 .sound {
-  position: absolute;
-  z-index: 20;
-  top: 40px;
-  left: 42px;
-  border: 0;
-  background: none;
-  font-size: 23px;
-  cursor: pointer
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1/1;
 }
 
 .home {
@@ -70,24 +65,42 @@ h1 {
   margin: 0;
   color: #595959;
   font-size: clamp(3rem, 6vw, 5.3rem);
-  font-weight: 300;
-  line-height: 1;
-  text-shadow: 0 4px 4px #0004
+  text-shadow: 0 4px 4px #0004;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Pridi;
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 80px; /* 94.118% */
+    letter-spacing: -3.4px;
+  
 }
 
 h1 em {
-  font-style: normal;
-  font-weight: 500;
-  color: #fff8cc;
-  text-shadow: 0 4px 4px #0004
+  color: #FFF8CC;
+text-align: center;
+text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #636566;
+font-family: Pridi;
+font-size: 85px;
+font-style: normal;
+font-weight: 500;
+line-height: 80px; /* 94.118% */
+letter-spacing: -2.55px;
 }
 
 .home-content>p {
-  font-size: clamp(1.1rem, 2vw, 1.85rem);
+  font-size: clamp(1.5rem, 2vw, 1.85rem);
   margin: 14px 0 41px;
   color: #909090;
   line-height: 1;
-  text-shadow: 0 2px 2px #0002
+text-shadow: 0 4px 2.5px rgba(0, 0, 0, 0.06);
+      font-family: Pridi;
+  letter-spacing: -0.9px;
+font-family: Pridi;
+font-style: normal;
+font-weight: 300;
 }
 
 .launchers {
@@ -104,10 +117,10 @@ h1 em {
   cursor: pointer;
   display: grid;
   place-items: center;
-  gap: 5px;
   font-size: 16px;
-  text-shadow: 0 2px 2px #0003;
-  transition: transform .2s
+  font-weight: 300;
+text-shadow: 0 2px 1.6px rgba(0, 0, 0, 0.22);
+  transition: transform .2s;
 }
 
 .launchers button:hover {
