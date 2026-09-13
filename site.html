@@ -8,10 +8,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Pridi:wght@300;500&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/png" href="images/site icon.png" />
     </head>
     <body>
         <main class="desktop">
             <button class="sound" id="sound" aria-label="Toggle sound"><img src="images/volume.png" alt="" /></button>
+            <audio id="click-audio" src="audio/click.mp3"></audio>
             <section class="home" aria-label="Welcome">
                 <img class="browser-frame" src="images/folder background.png" alt="" />
                 <div class="home-content">
@@ -167,8 +169,8 @@
                 <div class="panel-content">
                     <div class="contacts">
                         <a href="mailto:meganchau0912@gmail.com"><b>✉</b>email<small>meganchau0912@gmail.com</small></a>
-                        <a href="https://github.com/aerennic"><b>◖◗</b>github<small>aerennic</small></a>
-                        <a href="https://linkedin.com/in/megan-chau05"><b>in</b>linkedin<small>megan chau</small></a>
+                        <a href="https://github.com/aerennic" target="_blank"><b>◖◗</b>github<small>aerennic</small></a>
+                        <a href="https://linkedin.com/in/megan-chau05" target="_blank"><b>in</b>linkedin<small>megan chau</small></a>
                         <a href="mailto:mhc23@sfu.ca"><b>✉</b>SFU email<small>mhc23@sfu.ca</small></a>
                         <a href="tel:+16043199085"><b>⌕</b>phone<small>(604) 319-9085</small></a>
                     </div>
@@ -239,9 +241,23 @@
                 });
                 h.addEventListener("pointerup", () => (drag = false));
             });
+            const clickAudio = document.querySelector("#click-audio");
+            let soundIsOn = true;
+
+            function playClick() {
+                if (!soundIsOn) return;
+                clickAudio.currentTime = 0; // restart so rapid clicks retrigger properly
+                clickAudio.play();
+            }
+
+            document.addEventListener("click", (e) => {
+                if (e.target.closest("button")) {
+                    playClick();
+                }
+            });
+
             const soundButton = document.querySelector("#sound");
             const soundIcon = soundButton.querySelector("img");
-            let soundIsOn = true;
             soundButton.onclick = () => {
                 soundIsOn = !soundIsOn;
                 soundIcon.src = soundIsOn ? "images/volume.png" : "images/volume off.png";
