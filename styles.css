@@ -218,7 +218,7 @@ text-shadow: 0 2px 1.6px rgba(0, 0, 0, 0.22);
 .experience {
   left: 4vw;
   top: 5vh;
-  width: min(665px, calc(100vw - 34px));
+  width: min(630px, calc(100vw - 34px));
   height: min(1050px, calc(100vh - 50px))
 }
 
@@ -541,7 +541,7 @@ ul {
 .experience h3 { font-size: 17px; font-weight: 700; }
 .experience .job-title span { font-size: 16px; font-weight: 400; }
 .experience .job-title small { display: block; margin-top: 2px; font-size: 13px; font-weight: 400; color: #5f7aa9; }
-.experience ul { font-size: 15px; line-height: 2.15; }
+.experience ul { font-size: 14px; line-height: 2.15; }
 .experience article { padding: 0 0 37px; margin: 0 0 32px; }
 .experience .panel-content > article:last-child { margin-bottom: 0; }
 @media(max-width:720px) {
