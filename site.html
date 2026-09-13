@@ -239,8 +239,14 @@
                 });
                 h.addEventListener("pointerup", () => (drag = false));
             });
-            document.querySelector("#sound").onclick = (e) =>
-                (e.currentTarget.textContent = e.currentTarget.textContent === "🔊" ? "🔇" : "🔊");
+            const soundButton = document.querySelector("#sound");
+            const soundIcon = soundButton.querySelector("img");
+            let soundIsOn = true;
+            soundButton.onclick = () => {
+                soundIsOn = !soundIsOn;
+                soundIcon.src = soundIsOn ? "images/volume.png" : "images/volume off.png";
+                soundButton.setAttribute("aria-label", soundIsOn ? "Turn sound off" : "Turn sound on");
+            };
         </script>
     </body>
 </html>
