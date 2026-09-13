@@ -49,7 +49,7 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 5px 3px #0003)
+  filter: drop-shadow(0 5px 3px #0003);
 }
 
 .home-content {
@@ -137,10 +137,11 @@ text-shadow: 0 2px 1.6px rgba(0, 0, 0, 0.22);
   display: none;
   position: absolute;
   overflow: hidden;
-  background: #c7ddfb;
+    background: linear-gradient(180deg, #D1E5FF 0%, #cbdffc 100%);
   border: 2px solid #707174;
   border-radius: 8px;
-  box-shadow: 0 4px 5px #0006
+  box-shadow: 0 4px 5px #0006;
+  font-family: pridi, serif;
 }
 
 .panel.open {
@@ -167,10 +168,11 @@ text-shadow: 0 2px 1.6px rgba(0, 0, 0, 0.22);
   align-items: center;
   background: #a4a4a6;
   border-bottom: 2px solid #666;
-  color: #fff;
+  color: #FFF;
   font-size: 15px;
   cursor: grab;
-  user-select: none
+  user-select: none;
+  font-family: "Plus Jakarta Sans";
 }
 
 .panel header:active {
@@ -260,13 +262,8 @@ hr {
   height: 91px;
   border-radius: 50%;
   display: grid;
-  place-items: center;
   background: linear-gradient(135deg, #f7fbff, #7aa3b4);
-  border: 4px solid #eef7ff;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 27px;
-  color: #fff
+  border: 1px solid #eef7ff;
 }
 
 .profile h2 {
@@ -300,18 +297,17 @@ ul {
 
 .job-title {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   align-items: center;
-  font-family: Arial, sans-serif
 }
 
-.job-title i {
+.job-title img {
   font-style: normal;
   width: 62px;
   height: 62px;
   display: grid;
   place-items: center;
-  font-size: 31px;
+  font-size: 40px;
   background: white;
   border-radius: 5px
 }
@@ -479,7 +475,7 @@ ul {
     left: 12px !important;
     right: 12px !important;
     top: 46px !important;
-    width: calc(100vw - 24px) !important;
+    width: calc(100vw - 20px) !important;
     height: calc(100dvh - 118px) !important;
     max-height: none
   }
@@ -524,4 +520,24 @@ ul {
     padding: 7px 10px;
     font-size: 12px
   }
+}
+
+/* Experience panel: match the Figma typeface, inset content, and list spacing. */
+.experience .panel-content,
+.experience .panel-content * { font-family: "Plus Jakarta Sans", sans-serif; }
+.experience h2 { margin: 0 0 45px 34px; font-size: 30px; font-weight: 400; letter-spacing: -1.2px; }
+.experience .job-title,
+.experience ul { margin-left: 34px; }
+.experience .job-title { gap: 34px; }
+.experience .job-title img { width: 77px; height: 77px; object-fit: contain; }
+.experience h3 { font-size: 17px; font-weight: 700; }
+.experience .job-title span { font-size: 16px; font-weight: 400; }
+.experience .job-title small { display: block; margin-top: 2px; font-size: 13px; font-weight: 400; color: #5f7aa9; }
+.experience ul { font-size: 15px; line-height: 2.15; }
+.experience article { padding: 0 0 37px; margin: 0 0 32px; }
+.experience .panel-content > article:last-child { margin-bottom: 0; }
+@media(max-width:720px) {
+  .experience h2, .experience .job-title, .experience ul { margin-left: 0; }
+  .experience h2 { font-size: 26px; margin-bottom: 30px; }
+  .experience ul { font-size: 13px; }
 }
