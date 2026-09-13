@@ -1,29 +1,251 @@
-<!DOCTYPE html> 
+<!doctype html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>meg's space</title>
-        <link rel="icon" href="yellow star.png">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300;500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
     </head>
-
     <body>
-        <div style="width: 100%; height: 100%; position: relative; background: linear-gradient(180deg, #A0BBF3 17%, #DFEEF2 69%, #FDF8DF 87%); overflow: hidden">
-        <img style="width: 879px; height: 611px; left: 383px; top: 175px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16)" src="folder background.png" />
-        <div style="left: 577px; top: 383px; position: absolute"><span style="color: #595959; font-size: 85px; font-family: Pridi; font-weight: 300; line-height: 80px; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">hi,</span><span style="color: #595959; font-size: 85px; font-family: Pridi; font-weight: 300; line-height: 80px; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)"> </span><span style="color: #595959; font-size: 85px; font-family: Pridi; font-weight: 300; line-height: 80px; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">i’m </span></div>
-        <div style="left: 806px; top: 383px; position: absolute; text-align: center; color: #FFF8CC; font-size: 85px; font-family: Pridi; font-weight: 500; line-height: 80px; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">megan</div>
-        <div style="left: 623px; top: 451px; position: absolute; color: #909090; font-size: 30px; font-family: Pridi; font-weight: 300; line-height: 80px; word-wrap: break-word; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10)">aspiring developer and creator</div>
-        <div style="left: 575px; top: 604px; position: absolute; color: #818181; font-size: 16px; font-family: Pridi; font-weight: 300; line-height: 80px; word-wrap: break-word; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.22)">about</div>
-        <div style="left: 706px; top: 606px; position: absolute; color: #818181; font-size: 16px; font-family: Pridi; font-weight: 300; line-height: 80px; word-wrap: break-word; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.22)">experience</div>
-        <div style="left: 866px; top: 606px; position: absolute; color: #818181; font-size: 16px; font-family: Pridi; font-weight: 300; line-height: 80px; word-wrap: break-word; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.22)">projects</div>
-        <div style="left: 1023px; top: 606px; position: absolute; color: #818181; font-size: 16px; font-family: Pridi; font-weight: 300; line-height: 80px; word-wrap: break-word; text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.22)">contact</div>
-        <img style="width: 87px; height: 76px; left: 552px; top: 557px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)" src="about me.png" />
-        <img style="width: 81px; height: 79px; left: 706px; top: 557px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04)" src="experience.png" />
-        <img style="width: 82px; height: 78px; left: 854px; top: 558px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)" src="projects.png" />
-        <img style="width: 85px; height: 72px; left: 1008px; top: 561px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)" src="messaging.png" />
-        </div>
+        <main class="desktop">
+            <button class="sound" id="sound" aria-label="Toggle sound">🔊</button>
+            <section class="home" aria-label="Welcome">
+                <img class="browser-frame" src="images/folder background.png" alt="" />
+                <div class="home-content">
+                    <h1>hi, i’m <em>megan</em></h1>
+                    <p>aspiring developer and creator</p>
+                    <nav class="launchers" aria-label="Portfolio sections">
+                        <button data-open="about">
+                            <img src="images/about me.png" alt="" />
+                            <span>about</span>
+                        </button>
+                        <button data-open="experience">
+                            <img src="images/experience.png" alt="" />
+                            <span>experience</span>
+                        </button>
+                        <button data-open="projects">
+                            <img src="images/projects.png" alt="" />
+                            <span>projects</span>
+                        </button>
+                        <button data-open="contact">
+                            <img src="images/messaging.png" alt="" />
+                            <span>contact</span>
+                        </button>
+                    </nav>
+                </div>
+            </section>
+            <section class="panel about" id="about">
+                <header data-drag>
+                    <span>about me</span>
+                    <button data-close="about" aria-label="Close about">×</button>
+                </header>
+                <div class="panel-content">
+                    <div class="profile">
+                        <div class="avatar">MC</div>
+                        <div>
+                            <h2>Megan Chau</h2>
+                            <p>Computer Science Student @ SFU</p>
+                        </div>
+                    </div>
+                    <p>
+                        Hi! I’m Megan, a third year student studying at Simon Fraser University. I have a passion for
+                        web design, game &amp; software development, and pretty much everything creative!
+                    </p>
+                    <hr />
+                    <h3>Technical Skills</h3>
+                    <p><b>Languages:</b> HTML, CSS, C, C++, Python, Java, TypeScript, LaTeX, RISC-V Assembly</p>
+                    <p>
+                        <b>Tools/Frameworks:</b> Git, GitHub, React, VS Code, IntelliJ, Microsoft Office, Expo, UML,
+                        Figma, Procreate, Clip Studio Paint, Blender, Wix
+                    </p>
+                    <hr />
+                    <h3>Other interests</h3>
+                    <p>I love…</p>
+                    <ul>
+                        <li>Drawing!</li>
+                        <li>Music! If I could have earbuds on all day I would</li>
+                        <li>Reading &amp; playing video games when I’m free!</li>
+                        <li>Seventeen &lt;3</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="panel experience" id="experience">
+                <header data-drag>
+                    <span>experience</span><button data-close="experience" aria-label="Close experience">×</button>
+                </header>
+                <div class="panel-content">
+                    <h2>Work Experience</h2>
+                    <article>
+                        <div class="job-title">
+                            <i>▣</i>
+                            <div>
+                                <h3>Treasurer</h3>
+                                <span>Computing Science Student Society</span><small>May 2026 - Present</small>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Manage the finances of the CSSS, including subscriptions and revenue</li>
+                            <li>Maintain a financial record to ensure smooth daily operations</li>
+                            <li>Regularly report on the society’s financial state to members</li>
+                            <li>Work collaboratively with exec team to regulate operations</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <div class="job-title">
+                            <i class="orange">🧋</i>
+                            <div>
+                                <h3>Cashier, Barista</h3>
+                                <span>CoCo Fresh Tea &amp; Juice</span><small>Oct 2025 - Present</small>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Communicate with customers in a fast-paced environment</li>
+                            <li>Manage multiple tasks while maintaining efficiency and attention to detail</li>
+                            <li>Collaborate with team members to keep operations running smoothly</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <div class="job-title">
+                            <i class="purple">◩</i>
+                            <div>
+                                <h3>Ride Attendant</h3>
+                                <span>Pacific National Exhibition (PNE)</span><small>July - Sept 2025</small>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Ensured guest safety by following operational protocols</li>
+                            <li>Communicated clearly with guests and team members to resolve issues</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <section class="panel projects" id="projects">
+                <header data-drag>
+                    <span>projects</span><button data-close="projects" aria-label="Close projects">×</button>
+                </header>
+                <div class="panel-content">
+                    <article class="project">
+                        <div class="project-image cat">🐱</div>
+                        <div>
+                            <h2>Meowmino’s Delivery</h2>
+                            <small>Java, Maven | Jan - Apr 2026</small>
+                            <p>
+                                A 2D arcade style game created for CMPT 276. Inspired by Omori and Stardew Valley, help
+                                the player deliver pizza while collecting points and avoiding obstacles.
+                            </p>
+                            <a href="#">github link</a>
+                        </div>
+                    </article>
+                    <article class="project reverse">
+                        <div class="project-image screen">▤</div>
+                        <div>
+                            <h2>Jobly</h2>
+                            <small>TypeScript, CSS | JourneyHacks 2026</small>
+                            <p>
+                                Jobly integrates Gemini AI to analyse user-uploaded resumes and generates suggestions
+                                based on job postings. I led the design and front-end development.
+                            </p>
+                            <a href="#">github link</a>
+                        </div>
+                    </article>
+                    <article class="project solo">
+                        <div>
+                            <h2>Tour Story</h2>
+                            <small>TypeScript | StormHacks 2025</small>
+                            <p>
+                                A mobile app that utilizes Gemini AI to analyse pictures of tourist attractions. A story
+                                is generated and returned to the user, with options to narrate and personalize the tour.
+                            </p>
+                            <a href="#">github link</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="panel contact" id="contact">
+                <header data-drag>
+                    <span>contact</span><button data-close="contact" aria-label="Close contact">×</button>
+                </header>
+                <div class="panel-content">
+                    <div class="contacts">
+                        <a href="mailto:megan.chau0912@gmail.com"
+                            ><b>✉</b>email<small>megan.chau0912@gmail.com</small></a
+                        ><a href="https://github.com/aeernic"><b>◖◗</b>github<small>aeernic</small></a
+                        ><a href="#"><b>in</b>linkedin<small>megan chau</small></a
+                        ><a href="mailto:mhc23@sfu.ca"><b>✉</b>SFU email<small>mhc23@sfu.ca</small></a
+                        ><a href="tel:+16043191985"><b>⌕</b>phone<small>(604) 319-1985</small></a>
+                    </div>
+                    <p class="note">
+                        The easiest way to contact me is through my SFU email since I regularly check it for school. But
+                        any other ways work too, just can’t guarantee quick replies :D
+                    </p>
+                </div>
+            </section>
+            <nav class="taskbar" id="taskbar" aria-label="Open tabs"></nav>
+        </main>
+        <script>
+            const panels = [...document.querySelectorAll(".panel")];
+            let z = 10;
+            const front = (p) => (p.style.zIndex = ++z);
+            const taskbar = () => {
+                const bar = document.querySelector("#taskbar");
+                bar.innerHTML = "";
+                panels
+                    .filter((p) => p.classList.contains("open"))
+                    .forEach((p) => {
+                        const b = document.createElement("button");
+                        b.textContent = p.querySelector("header span").textContent;
+                        b.onclick = () => front(p);
+                        bar.append(b);
+                    });
+            };
+            document.querySelectorAll("[data-open]").forEach(
+                (b) =>
+                    (b.onclick = () => {
+                        const p = document.querySelector("#" + b.dataset.open);
+                        p.classList.add("open");
+                        front(p);
+                        taskbar();
+                    })
+            );
+            document.querySelectorAll("[data-close]").forEach(
+                (b) =>
+                    (b.onclick = () => {
+                        document.querySelector("#" + b.dataset.close).classList.remove("open");
+                        taskbar();
+                    })
+            );
+            panels.forEach((p) => {
+                p.addEventListener("pointerdown", () => front(p));
+                const h = p.querySelector("[data-drag]");
+                let sx,
+                    sy,
+                    ox,
+                    oy,
+                    drag = false;
+                h.addEventListener("pointerdown", (e) => {
+                    if (e.target.closest("button") || innerWidth < 721) return;
+                    drag = true;
+                    sx = e.clientX;
+                    sy = e.clientY;
+                    const r = p.getBoundingClientRect();
+                    ox = r.left;
+                    oy = r.top;
+                    h.setPointerCapture(e.pointerId);
+                    front(p);
+                });
+                h.addEventListener("pointermove", (e) => {
+                    if (!drag) return;
+                    p.style.left = Math.max(8, Math.min(innerWidth - p.offsetWidth - 8, ox + e.clientX - sx)) + "px";
+                    p.style.top = Math.max(8, Math.min(innerHeight - p.offsetHeight - 8, oy + e.clientY - sy)) + "px";
+                    p.style.right = "auto";
+                });
+                h.addEventListener("pointerup", () => (drag = false));
+            });
+            document.querySelector("#sound").onclick = (e) =>
+                (e.currentTarget.textContent = e.currentTarget.textContent === "🔊" ? "🔇" : "🔊");
+        </script>
     </body>
-
 </html>
