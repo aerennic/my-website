@@ -16,13 +16,13 @@
             <div class="boot-bar"><span id="boot-fill"></span></div>
         </div>
         <main class="desktop">
+            <canvas id="particles" aria-hidden="true"></canvas>
             <div class="ambient" aria-hidden="true">
                 <span class="cloud c1"></span>
                 <span class="cloud c2"></span>
                 <span class="cloud c3"></span>
             </div>
             <button class="sound" id="sound" aria-label="Toggle sound"><img src="images/volume.png" alt="" /></button>
-            <!-- <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button> -->
             <audio id="click-audio" src="audio/click.mp3"></audio>
             <section class="home" aria-label="Welcome">
                 <img class="browser-frame" src="images/folder background.png" alt="" />
@@ -220,11 +220,68 @@
                 }, 1100);
             }
 
+            /* ---------- floating particles ---------- */
+            (function () {
+                const canvas = document.querySelector("#particles");
+                const ctx = canvas.getContext("2d");
+                const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+                let w, h, particles;
+
+                const colorFor = (alpha) => `rgba(255, 255, 255, ${alpha})`;
+
+                const resize = () => {
+                    w = canvas.width = canvas.offsetWidth;
+                    h = canvas.height = canvas.offsetHeight;
+                };
+
+                const makeParticle = (randomY) => ({
+                    x: Math.random() * w,
+                    y: randomY ? Math.random() * h : h + 10,
+                    r: 1 + Math.random() * 2.6,
+                    speed: 0.15 + Math.random() * 0.5,
+                    drift: (Math.random() - 0.5) * 0.4,
+                    alpha: 0.25 + Math.random() * 0.5,
+                    twinkle: Math.random() * Math.PI * 2,
+                });
+
+                const init = () => {
+                    resize();
+                    const count = Math.min(70, Math.floor((w * h) / 18000));
+                    particles = Array.from({ length: count }, () => makeParticle(true));
+                };
+
+                const draw = () => {
+                    ctx.clearRect(0, 0, w, h);
+                    particles.forEach((p) => {
+                        const flicker = p.alpha * (0.7 + 0.3 * Math.sin(p.twinkle));
+                        ctx.beginPath();
+                        ctx.fillStyle = colorFor(flicker);
+                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                        ctx.fill();
+                    });
+                };
+
+                const tick = () => {
+                    particles.forEach((p) => {
+                        p.y -= p.speed;
+                        p.x += p.drift;
+                        p.twinkle += 0.03;
+                        if (p.y < -10) Object.assign(p, makeParticle(false));
+                    });
+                    draw();
+                    requestAnimationFrame(tick);
+                };
+
+                init();
+                addEventListener("resize", init);
+                reduceMotion ? draw() : requestAnimationFrame(tick);
+            })();
+
             const statuses = [
-                "aspiring developer",
-                "UI/UX enthusiast",
-                "aspiring game & software developer",
+                "software developer",
                 "aspiring creator",
+                "UI/UX enthusiast",
+                "aspiring web developer",
             ];
             const statusEl = document.querySelector("#status");
             let statusIndex = 0;
@@ -238,19 +295,6 @@
             };
             showStatus();
             setInterval(showStatus, 3000);
-
-            /* ---------- dark mode ---------- */
-            // const themeBtn = document.querySelector("#theme-toggle");
-            // const applyTheme = (t) => {
-            //     document.documentElement.setAttribute("data-theme", t);
-            //     themeBtn.textContent = t === "dark" ? "☀️" : "🌙";
-            // };
-            // applyTheme(localStorage.getItem("theme") || "light");
-            // themeBtn.onclick = () => {
-            //     const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-            //     applyTheme(next);
-            //     localStorage.setItem("theme", next);
-            // };
 
             /* ---------- windows: open / close / minimize / focus ---------- */
             const panels = [...document.querySelectorAll(".panel")];
@@ -378,7 +422,6 @@
 
             /* ---------- right-click desktop context menu ---------- */
             const menuItems = [
-                { label: "🌓 toggle dark mode", action: () => themeBtn.click() },
                 { label: "🔄 refresh", action: () => location.reload() },
                 { label: "✨ you found a secret!", action: () => toast("hehe, thanks for exploring ♡") },
             ];
