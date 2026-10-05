@@ -214,7 +214,6 @@ const boot = document.querySelector("#boot");
             /* ---------- right-click desktop context menu ---------- */
             const menuItems = [
                 { label: "🔄 refresh", action: () => location.reload() },
-                { label: "✨ you found a secret!", action: () => toast("hehe, thanks for exploring ♡") },
             ];
             let menuEl = null;
             const closeMenu = () => {
