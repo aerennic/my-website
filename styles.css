@@ -241,7 +241,7 @@ h1 em {
 
 .launchers {
   display: flex;
-  gap: 42px;
+  gap: 30px;
   align-items: start
 }
 
@@ -389,21 +389,21 @@ h1 em {
   left: 4vw;
   top: 5vh;
   width: min(630px, calc(100vw - 34px));
-  height: min(1050px, calc(100vh - 50px))
+  height: min(700px, calc(100vh - 50px))
 }
 
 .projects {
   right: 4vw;
   top: 5vh;
-  width: min(650px, calc(100vw - 34px));
-  height: min(1000px, calc(100vh - 50px))
+  width: min(800px, calc(100vw - 34px));
+  height: min(800px, calc(100vh - 50px))
 }
 
 .contact {
   right: 5vw;
   top: 5vh;
-  width: min(505px, calc(100vw - 34px));
-  height: min(450px, calc(100vh - 50px))
+  width: min(600px, calc(100vw - 34px));
+  height: min(500px, calc(100vh - 50px))
 }
 
 h2 {

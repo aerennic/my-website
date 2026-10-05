@@ -164,29 +164,29 @@ const boot = document.querySelector("#boot");
                 h.addEventListener("pointerup", () => (drag = false));
 
                 /* ---------- resizing ---------- */
-                const handle = p.querySelector("[data-resize]");
-                if (handle) {
-                    let rsx, rsy, rw, rh, resizing = false;
-                    handle.addEventListener("pointerdown", (e) => {
-                        if (innerWidth < 721) return;
-                        resizing = true;
-                        rsx = e.clientX;
-                        rsy = e.clientY;
-                        rw = p.offsetWidth;
-                        rh = p.offsetHeight;
-                        handle.setPointerCapture(e.pointerId);
-                        front(p);
-                        e.stopPropagation();
-                    });
-                    handle.addEventListener("pointermove", (e) => {
-                        if (!resizing) return;
-                        const newW = Math.max(280, Math.min(innerWidth - 16, rw + e.clientX - rsx));
-                        const newH = Math.max(220, Math.min(innerHeight - 16, rh + e.clientY - rsy));
-                        p.style.width = newW + "px";
-                        p.style.height = newH + "px";
-                    });
-                    handle.addEventListener("pointerup", () => (resizing = false));
-                }
+                // const handle = p.querySelector("[data-resize]");
+                // if (handle) {
+                //     let rsx, rsy, rw, rh, resizing = false;
+                //     handle.addEventListener("pointerdown", (e) => {
+                //         if (innerWidth < 721) return;
+                //         resizing = true;
+                //         rsx = e.clientX;
+                //         rsy = e.clientY;
+                //         rw = p.offsetWidth;
+                //         rh = p.offsetHeight;
+                //         handle.setPointerCapture(e.pointerId);
+                //         front(p);
+                //         e.stopPropagation();
+                //     });
+                //     handle.addEventListener("pointermove", (e) => {
+                //         if (!resizing) return;
+                //         const newW = Math.max(280, Math.min(innerWidth - 16, rw + e.clientX - rsx));
+                //         const newH = Math.max(220, Math.min(innerHeight - 16, rh + e.clientY - rsy));
+                //         p.style.width = newW + "px";
+                //         p.style.height = newH + "px";
+                //     });
+                //     handle.addEventListener("pointerup", () => (resizing = false));
+                // }
             });
             const clickAudio = document.querySelector("#click-audio");
             let soundIsOn = true;
