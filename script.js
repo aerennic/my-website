@@ -1,3 +1,4 @@
+
 const boot = document.querySelector("#boot");
             if (sessionStorage.getItem("booted")) {
                 boot.remove();
@@ -10,21 +11,21 @@ const boot = document.querySelector("#boot");
                     setTimeout(() => boot.remove(), 500);
                 }, 1100);
             }
-
+ 
             /* ---------- floating particles ---------- */
             (function () {
                 const canvas = document.querySelector("#particles");
                 const ctx = canvas.getContext("2d");
                 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
                 let w, h, particles;
-
+ 
                 const colorFor = (alpha) => `rgba(255, 255, 255, ${alpha})`;
-
+ 
                 const resize = () => {
                     w = canvas.width = canvas.offsetWidth;
                     h = canvas.height = canvas.offsetHeight;
                 };
-
+ 
                 const makeParticle = (randomY) => ({
                     x: Math.random() * w,
                     y: randomY ? Math.random() * h : h + 10,
@@ -34,13 +35,13 @@ const boot = document.querySelector("#boot");
                     alpha: 0.25 + Math.random() * 0.5,
                     twinkle: Math.random() * Math.PI * 2,
                 });
-
+ 
                 const init = () => {
                     resize();
                     const count = Math.min(70, Math.floor((w * h) / 18000));
                     particles = Array.from({ length: count }, () => makeParticle(true));
                 };
-
+ 
                 const draw = () => {
                     ctx.clearRect(0, 0, w, h);
                     particles.forEach((p) => {
@@ -51,7 +52,7 @@ const boot = document.querySelector("#boot");
                         ctx.fill();
                     });
                 };
-
+ 
                 const tick = () => {
                     particles.forEach((p) => {
                         p.y -= p.speed;
@@ -62,12 +63,12 @@ const boot = document.querySelector("#boot");
                     draw();
                     requestAnimationFrame(tick);
                 };
-
+ 
                 init();
                 addEventListener("resize", init);
                 reduceMotion ? draw() : requestAnimationFrame(tick);
             })();
-
+ 
             const statuses = [
                 "software developer",
                 "aspiring creator",
@@ -86,7 +87,7 @@ const boot = document.querySelector("#boot");
             };
             showStatus();
             setInterval(showStatus, 3000);
-
+ 
             /* ---------- windows: open / close / minimize / focus ---------- */
             const panels = [...document.querySelectorAll(".panel")];
             let z = 10;
@@ -162,7 +163,7 @@ const boot = document.querySelector("#boot");
                     p.style.right = "auto";
                 });
                 h.addEventListener("pointerup", () => (drag = false));
-
+ 
                 /* ---------- resizing ---------- */
                 // const handle = p.querySelector("[data-resize]");
                 // if (handle) {
@@ -190,19 +191,19 @@ const boot = document.querySelector("#boot");
             });
             const clickAudio = document.querySelector("#click-audio");
             let soundIsOn = true;
-
+ 
             function playClick() {
                 if (!soundIsOn) return;
                 clickAudio.currentTime = 0; // restart so rapid clicks retrigger properly
                 clickAudio.play();
             }
-
+ 
             document.addEventListener("click", (e) => {
                 if (e.target.closest("button")) {
                     playClick();
                 }
             });
-
+ 
             const soundButton = document.querySelector("#sound");
             const soundIcon = soundButton.querySelector("img");
             soundButton.onclick = () => {
@@ -210,7 +211,7 @@ const boot = document.querySelector("#boot");
                 soundIcon.src = soundIsOn ? "images/volume.png" : "images/volume off.png";
                 soundButton.setAttribute("aria-label", soundIsOn ? "Turn sound off" : "Turn sound on");
             };
-
+ 
             /* ---------- right-click desktop context menu ---------- */
             const menuItems = [
                 { label: "🔄 refresh", action: () => location.reload() },
@@ -236,7 +237,7 @@ const boot = document.querySelector("#boot");
             });
             document.addEventListener("click", closeMenu);
             document.addEventListener("scroll", closeMenu, true);
-
+ 
             function toast(msg) {
                 const t = document.createElement("div");
                 t.className = "toast";
@@ -245,3 +246,68 @@ const boot = document.querySelector("#boot");
                 setTimeout(() => t.classList.add("show"), 10);
                 setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 2200);
             }
+ 
+/* ---------- "on repeat" playlist widget (about > interests) ---------- */
+/* Edit this list to change the songs.
+   cover (optional): path to an image, e.g. "images/covers/song.jpg".
+   Without one, the song gets a coloured tile with its first letter. */
+const songs = [
+    { title: "Perfect Night", artist: "LE SSERAFIM" },
+    { title: "Nicole Kidman", artist: "ADELA" },    
+    { title: "Lost Island", artist: "ENHYPEN" },
+    { title: "_WORLD", artist: "SEVENTEEN" },
+];
+ 
+(function () {
+    const root = document.querySelector("#playlist");
+    if (!root) return;
+    const list = root.querySelector("#pl-cards");
+    const label = root.querySelector("#pl-label");
+    const record = root.querySelector(".pl-record");
+ 
+    // soft tints that sit with the site's blues
+    const tints = ["#a0bbf3", "#c9a7c4", "#9cc4b5", "#d9c08f", "#a99fd6", "#86b3c9"];
+ 
+    const setLabel = (i) => {
+        label.style.setProperty("--pl-label", tints[i % tints.length]);
+    };
+ 
+    const cards = songs.map((song, i) => {
+        const li = document.createElement("li");
+        li.className = "pl-card";
+        li.innerHTML = `<span class="pl-art"></span><span class="pl-text"><div class="pl-name"></div><div class="pl-artist"></div></span>`;
+        const art = li.querySelector(".pl-art");
+        if (song.cover) {
+            art.innerHTML = `<img src="${song.cover}" alt="">`;
+        } else {
+            art.style.background = tints[i % tints.length];
+            art.textContent = song.title.trim()[0] || "♪";
+        }
+        li.querySelector(".pl-name").textContent = song.title;
+        li.querySelector(".pl-artist").textContent = song.artist;
+        li.addEventListener("pointerenter", () => setLabel(i));  // record label takes the hovered song's colour
+        list.append(li);
+        return li;
+    });
+    setLabel(0);
+ 
+    // nudge each card right so the stack hugs the curve of the record
+    const hug = () => {
+        const r = record.getBoundingClientRect();
+        if (!r.width) return; // about window is closed
+        const R = r.width / 2, cx = r.left + R, cy = r.top + R;
+        const items = cards;
+        items.forEach((c) => (c.style.marginLeft = c.style.maxWidth = ""));
+        items.forEach((c) => {
+            const b = c.getBoundingClientRect();
+            // vertical distance from the record's centre to the closest point of the card
+            const dy = b.top <= cy && b.bottom >= cy ? 0 : Math.min(Math.abs(b.top - cy), Math.abs(b.bottom - cy));
+            const vinylEdge = dy < R ? cx + Math.sqrt(R * R - dy * dy) : cx;
+            const m = Math.max(0, vinylEdge + 14 - b.left);
+            c.style.marginLeft = `${m}px`;
+            c.style.maxWidth = `calc(100% - ${m}px)`; // never push a card off the edge
+        });
+    };
+    new ResizeObserver(hug).observe(root);
+})();
+ 
