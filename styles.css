@@ -387,6 +387,13 @@ h1 em {
   height: min(600px, calc(100vh - 50px))
 }
 
+.profile-tab {
+  left: 8vw;
+  top: 8vh;
+  width: min(560px, calc(100vw - 34px));
+  height: min(600px, calc(100vh - 50px))
+}
+
 .experience {
   left: 4vw;
   top: 5vh;
