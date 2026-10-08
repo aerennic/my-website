@@ -245,11 +245,10 @@ const boot = document.querySelector("#boot");
                 setTimeout(() => t.classList.add("show"), 10);
                 setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 2200);
             }
+
+
  
 /* ---------- "on repeat" playlist widget (about > interests) ---------- */
-/* Edit this list to change the songs.
-   cover (optional): path to an image, e.g. "images/covers/song.jpg".
-   Without one, the song gets a coloured tile with its first letter. */
 const songs = [
     { title: "Perfect Night", artist: "LE SSERAFIM" },
     { title: "Nicole Kidman", artist: "ADELA" },    
@@ -264,7 +263,6 @@ const songs = [
     const label = root.querySelector("#pl-label");
     const record = root.querySelector(".pl-record");
  
-    // soft tints that sit with the site's blues
     const tints = ["#a0bbf3", "#c9a7c4", "#9cc4b5", "#d9c08f", "#a99fd6", "#86b3c9"];
  
     const setLabel = (i) => {
@@ -272,22 +270,15 @@ const songs = [
     };
  
     const cards = songs.map((song, i) => {
-        const li = document.createElement("li");
-        li.className = "pl-card";
-        li.innerHTML = `<span class="pl-art"></span><span class="pl-text"><div class="pl-name"></div><div class="pl-artist"></div></span>`;
-        const art = li.querySelector(".pl-art");
-        if (song.cover) {
-            art.innerHTML = `<img src="${song.cover}" alt="">`;
-        } else {
-            art.style.background = tints[i % tints.length];
-            art.textContent = song.title.trim()[0] || "♪";
-        }
-        li.querySelector(".pl-name").textContent = song.title;
-        li.querySelector(".pl-artist").textContent = song.artist;
-        li.addEventListener("pointerenter", () => setLabel(i));  // record label takes the hovered song's colour
-        list.append(li);
-        return li;
-    });
+    const li = document.createElement("li");
+    li.className = "pl-card";
+    li.innerHTML = `<div class="pl-text"><div class="pl-name"></div><div class="pl-artist"></div></div>`;
+    li.querySelector(".pl-name").textContent = song.title;
+    li.querySelector(".pl-artist").textContent = song.artist;
+    li.addEventListener("pointerenter", () => setLabel(i));
+    list.append(li);
+    return li;
+});
     setLabel(0);
  
     // nudge each card right so the stack hugs the curve of the record
@@ -310,11 +301,37 @@ const songs = [
     new ResizeObserver(hug).observe(root);
 })();
  
+const captions = {
+    default: "Hover over photos for captions!",
+    image1: "Taken when I was volunteering for FROSH 2025!",
+    image2: "Me and my handcrafted bouquet at Sam's birthday party :)",
+    image3: "Rare photo of my drawing process :O",
+};
+
+(function () {
+    const root = document.querySelector(".photo-collage"); //grabs the photo collage container
+    if (!root) {
+        return; // exits if the container isn't on the page
+    }
+
+    const images = root.querySelectorAll(".photo-collage-image"); //grabs all the images in the photo collage
+    const captionEl = root.querySelector(".caption"); //grabs the caption element in the photo collage
+
+    const updateCaption = (img) => {
+        const key = img ? img.dataset.key : "default";
+        captionEl.textContent = captions[key] ?? captions.default; //updates the caption text based on the hovered image's data-key attribute, or shows the default caption if no image is hovered
+    };
+
+    images.forEach((img) => {
+        img.addEventListener("pointerenter", () => updateCaption(img));
+        img.addEventListener("pointerleave", () => updateCaption(null));
+    });
+
+    updateCaption(null);
+})();
 
 
 /* ---------- technical skills filter (about) ---------- */
-/* Add a skill: put it in the right category below.
-   Add a category: add a new key here and give it a dot colour in skillColours. */
 const skills = {
     Languages: ["HTML", "CSS", "Java", "Python", "C", "C++", "JavaScript", "TypeScript", "SQL", "RISCV-assembly", "Bash", "LaTeX"],
     Frameworks: ["React", "Node.js", "JUnit", "Mockito"],
