@@ -30,23 +30,23 @@
             <section class="home" aria-label="Welcome">
                 <img class="browser-frame" src="images/homepage folder.png" alt="" />
                 <div class="home-content">
-                    <h1>hi, i’m <em>megan</em></h1>
+                    <h0>hi, i’m <em>megan</em></h0>
                     <p class="status" id="status" aria-live="polite"></p>
                     <nav class="launchers" aria-label="Portfolio sections">                                                                                 
                         <button data-open="about">
-                            <img src="images/profile icon.png" alt="" />
+                            <img src="images/about icon.png" alt="About icon button that opens the about panel" />
                             <span>about</span>
                         </button>
                         <button data-open="experience">
-                            <img src="images/experience.png" alt="" />
+                            <img src="images/experience.png" alt="Experience icon button that opens the experience panel" />
                             <span>experience</span>
                         </button>
                         <button data-open="projects">
-                            <img src="images/projects.png" alt="" />
+                            <img src="images/projects.png" alt="Projects icon button that opens the projects panel" />
                             <span>projects</span>
                         </button>
                         <button data-open="contact">
-                            <img src="images/messaging.png" alt="" />
+                            <img src="images/messaging.png" alt="Contact icon button that opens the contact panel" />
                             <span>contact</span>
                         </button>
                         
@@ -61,7 +61,7 @@
                 </header>
                 <div class="panel-content">
                     <div class="profile">
-                    <img class="avatar" src="images/profile picture.png" alt="Megan Chau">                        <div>
+                    <img class="avatar" src="images/profile picture.png" alt="Megan Chau's profile picture">                        <div>
                             <h2>Megan Chau</h2>
                             <p>Computer Science Student @ SFU</p>
                         </div>
@@ -80,23 +80,23 @@
                     <br />
 
                     <h3>TECHNICAL SKILLS</h3>
-                    <ul>
-                        <li>Languages: <span class="highlight">Java, Python, C++, JavaScript, TypeScript</span></li>
-                        <li>Frameworks: <span class="highlight">React, Node.js, Express</span></li>
-                        <li>Other: <span class="highlight">HTML, CSS, Git, SQL</span></li>
-
-                    <br />
-
-                    <!-- ---------- playlist widget (songs live in script.js) ---------- -->
-                    <h3>ON REPEAT</h3>
-                    <div class="playlist" id="playlist">
-                        <div class="pl-record" aria-hidden="true"><span class="pl-label" id="pl-label"></span></div>
-                        <div class="pl-side">
-                            <ul class="pl-cards" id="pl-cards"></ul>
-                        </div>
+                    <!-- ---------- skills filter (skills live in script.js) ---------- -->
+                    <div class="skills" id="skills">
+                        <div class="sk-filters" role="group" aria-label="Filter skills"></div>
+                        <ul class="sk-list" aria-live="polite"></ul>
                     </div>
                     <hr />
-                    
+
+                    <!--More about me!!!-->
+                    <h1>ABOUT ME</h1>
+                    <div class="photo-collage">
+                        <img src="images/experience.png" alt="" />
+                        <img src="images/experience.png" alt="" />
+                        <img src="images/experience.png" alt="" />
+                    </div>
+                    <p class="caption">Photo captions here temp</p>
+                    <br/>
+
                     <h3>INTERESTS</h3>
                     <p>You can always find me...</p>
                     <ul>
@@ -105,6 +105,19 @@
                         <li><span class="highlight">Drawing</span> something</li>
                         <li>Spending time with my <span class="highlight">friends</span>!</li>
                     </ul>
+
+                    <br/>
+                    
+                    <!-- ---------- playlist widget (songs live in script.js) ---------- -->
+                    <h3>ON REPEAT</h3>
+                    <div class="playlist" id="playlist">
+                        <div class="pl-record" aria-hidden="true"><span class="pl-label" id="pl-label"></span></div>
+                        <div class="pl-side">
+                            <ul class="pl-cards" id="pl-cards"></ul>
+                        </div>
+                    </div>
+
+                    
                 </div>
             </section>
             <section class="panel profile-tab" id="profile">

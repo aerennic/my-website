@@ -1,4 +1,3 @@
-
 const boot = document.querySelector("#boot");
             if (sessionStorage.getItem("booted")) {
                 boot.remove();
@@ -311,3 +310,51 @@ const songs = [
     new ResizeObserver(hug).observe(root);
 })();
  
+
+
+/* ---------- technical skills filter (about) ---------- */
+/* Add a skill: put it in the right category below.
+   Add a category: add a new key here and give it a dot colour in skillColours. */
+const skills = {
+    Languages: ["HTML", "CSS", "Java", "Python", "C", "C++", "JavaScript", "TypeScript", "SQL", "RISCV-assembly", "Bash", "LaTeX"],
+    Frameworks: ["React", "Node.js", "JUnit", "Mockito"],
+    "Tools & Systems": ["Git", "GitHub", "Docker", "Cloudflare", "Figma", "Expo", "Maven", "CMake", "VS Code", "UML", "Linux", "TCP/UDP", "Neovim", "Procreate", "MATLAB"],
+};
+const skillColours = {
+    Languages: "#6b85af",
+    Frameworks: "#c79bb8",
+    "Tools & Systems": "#8fb8a8",
+};
+
+(function () {
+    const root = document.querySelector("#skills");
+    if (!root) return;
+    const filters = root.querySelector(".sk-filters");
+    const list = root.querySelector(".sk-list");
+    const all = Object.entries(skills).flatMap(([cat, names]) => names.map((name) => ({ name, cat })));
+
+    const show = (cat) => {
+        filters.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.cat === cat));
+        list.innerHTML = "";
+        all.filter((s) => cat === "All" || s.cat === cat).forEach((s, i) => {
+            const li = document.createElement("li");
+            li.className = "sk-chip";
+            li.textContent = s.name;
+            li.title = s.cat;
+            li.style.setProperty("--sk-dot", skillColours[s.cat] || "#6b85af");
+            li.style.animationDelay = `${i * 30}ms`; // chips pop in one after another
+            list.append(li);
+        });
+    };
+
+    ["All", ...Object.keys(skills)].forEach((cat) => {
+        const b = document.createElement("button");
+        b.className = "sk-filter";
+        b.dataset.cat = cat;
+        const n = cat === "All" ? all.length : skills[cat].length;
+        b.innerHTML = `${cat}<small>${n}</small>`;
+        b.onclick = () => show(cat);
+        filters.append(b);
+    });
+    show("Languages"); // default category
+})();
