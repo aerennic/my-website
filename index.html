@@ -25,10 +25,10 @@
                 <span class="cloud c2"></span>
                 <span class="cloud c3"></span>
             </div>
-            <button class="sound" id="sound" aria-label="Toggle sound"><img src="images/volume on.png" alt="" /></button>
+            <button class="sound" id="sound" aria-label="Toggle sound"><img src="images/volume on.png" alt="Button to toggle sound" /></button>
             <audio id="click-audio" src="audio/click.mp3"></audio>
             <section class="home" aria-label="Welcome">
-                <img class="browser-frame" src="images/homepage folder.png" alt="" />
+                <img class="browser-frame" src="images/homepage folder.png" alt="Browser frame for the home section" />
                 <div class="home-content">
                     <h0>hi, i’m <em>megan</em></h0>
                     <p class="status" id="status" aria-live="polite"></p>
@@ -68,22 +68,25 @@
                     </div>
                     <p>
                         Hi! I’m <span class="highlight">Megan Chau</span>, a third year student studying at Simon Fraser University. I am an aspiring software 
-                        developer who enjoys creating <span class="highlight">interactive</span> and <span class="highlight">visually appealing applications</span>. <br><br> I'm interested in <span class="highlight">web
-                        development, UI/UX, software engineering</span>... pretty much anything <span class="highlight">creative</span> and <span class="highlight">fun</span>! I love combining code and design to build things that are both functional and engaging to use!  
+                        developer who enjoys creating <span class="highlight">interactive</span> and <span class="highlight">visually appealing applications</span>.
                     </p>
-                    <br/>
+                    <p>
+                        I'm interested in <span class="highlight">web development, UI/UX, software engineering</span>... pretty much anything 
+                        <span class="highlight">creative</span> and <span class="highlight">fun</span>! I love combining code and design to build things that are both functional and engaging to use!<br/>  
+                    </p>
+
+                    <div class="technical-skills">
+                        <h3>TECHNICAL SKILLS</h3>
+                        <div class="skills" id="skills">
+                            <div class="sk-filters" role="group" aria-label="Filter skills"></div>
+                            <ul class="sk-list" aria-live="polite"></ul><br />
+                        </div>
+                    </div>
+
                     <h3>EDUCATION</h3>
                     <div class="entry">
                     <p class="degree">Bachelor of Science in Computing Science</p>
                     <p class="entry-note">Expected graduation: 2028</p>
-                    </div>
-                    <br />
-
-                    <h3>TECHNICAL SKILLS</h3>
-                    <!-- ---------- skills filter (skills live in script.js) ---------- -->
-                    <div class="skills" id="skills">
-                        <div class="sk-filters" role="group" aria-label="Filter skills"></div>
-                        <ul class="sk-list" aria-live="polite"></ul>
                     </div>
                     <hr />
 
@@ -121,25 +124,11 @@
                         </div>  
                     </div>
 
-                    <p class="note"><br>Feel free to reach out if you want to collaborate or just talk. :)
+                    <p class="note"><br>Feel free to reach out if you want to collaborate or just talk. :&rpar;
                         <br/> 
                         <a href="https://linkedin.com/in/megan-chau05" target="_blank">Linkedin &nearr;</a>
                         <a href="https://instagram.com/mega4nn" target="_blank">Instagram &nearr;</a>
                     </p>
-                    
-
-
-                </div>
-            </section>
-            <section class="panel profile-tab" id="profile">
-                <header data-drag>
-                    <span>profile</span>
-                    <button data-minimize="profile" aria-label="Minimize profile">–</button>
-                    <button data-close="profile" aria-label="Close profile">×</button>
-                </header>
-                <div class="panel-content">
-                    <h2>Profile</h2>
-                    <p>Work in progress!</p>
                 </div>
             </section>
             <section class="panel experience" id="experience">
@@ -149,47 +138,69 @@
                     <button data-close="experience" aria-label="Close experience">×</button>
                 </header>
                 <div class="panel-content">
-                    <h2>Work Experience</h2>
+                    <h2>LEADERSHIP</h2>
                     <article>
                         <div class="job-title">
-                            <img class="work-image" src="images/CSSS logo.jpg" alt="CSSS Logo">                            <div>
+                            <img class="work-image" src="images/CSSS logo.jpg" alt="An image of the CSSS Logo">                            <div>
                                 <h3>Treasurer</h3>
                                 <span>Computing Science Student Society</span><small>May 2026 - Present</small>
                             </div>
                         </div>
-                        <ul>
-                            <li>Manage the finances of the CSSS, including subscriptions and revenue</li>
-                            <li>Maintain a financial record to ensure smooth daily operations</li>
-                            <li>Regularly report on the society’s financial state to members</li>
-                            <li>Work collaboratively with exec team to regulate operations</li>
-                        </ul>
-                    </article>
+                    </article>                        
+                    <h2>WORK EXPERIENCE</h2>
                     <article>
                         <div class="job-title">
-                            <img class="work-image" src="images/CoCo logo.jpg" alt="CoCo Logo">
+                            <img class="work-image" src="images/Coco Logo.png" alt="An image of the CoCo Logo">                            
                             <div>
-                                <h3>Cashier, Barista</h3>
-                                <span>CoCo Fresh Tea &amp; Juice</span><small>Oct 2025 - Present</small>
+                                <h3>Barista, Cashier</h3>
+                                <span>CoCo Fresh Tea &amp; Juice</span><small>May 2026 - Present</small>
                             </div>
                         </div>
-                        <ul>
-                            <li>Communicate with customers in a fast-paced environment</li>
-                            <li>Manage multiple tasks while maintaining efficiency and attention to detail</li>
-                            <li>Collaborate with team members to keep operations running smoothly</li>
-                        </ul>
-                    </article>
-                    <article>
                         <div class="job-title">
-                            <img class="work-image" src="images/PNE logo.jpg" alt="PNE Logo">
+                            <img class="work-image" src="images/PNE logo.jpg" alt="An image of the PNE Logo">
                             <div>
                                 <h3>Ride Attendant</h3>
                                 <span>Pacific National Exhibition (PNE)</span><small>July - Sept 2025</small>
                             </div>
                         </div>
-                        <ul>
-                            <li>Ensured guest safety by following operational protocols</li>
-                            <li>Communicated clearly with guests and team members to resolve issues</li>
-                        </ul>
+                    </article>
+                    <h2>VOLUNTEERING</h2>
+                    <article>
+                        <div class="job-title">
+                            <img class="work-image" src="images/CSSS logo.jpg" alt="An image of the CSSS Logo">                            
+                            <div>
+                                <h3>CSSS Multimedia Team</h3>
+                                <span>Computing Science Student Society</span><small>May 2026 - Present</small>
+                            </div>
+                        </div>
+                        <div class="job-title">
+                            <img class="work-image" src="images/CSSS logo.jpg" alt="An image of the CSSS Logo">                            
+                            <div>
+                                <h3>FROSH Leader</h3>
+                                <span>Computing Science Student Society</span><small>Oct 2025</small>
+                            </div>
+                        </div>
+                        <div class="job-title">
+                            <img class="work-image" src="images/Shoppers Logo.png" alt="An image of the Shoppers Drug Mart Logo">                            
+                            <div>
+                                <h3>Pharmacy Assistant</h3>
+                                <span>Shoppers Drug Mart</span><small>Oct 2023 - Nov 2023</small>
+                            </div>
+                        </div>                        
+                        <div class="job-title">
+                            <img class="work-image" src="images/Shoppers Logo.png" alt="An image of the Shoppers Drug Mart Logo">                            
+                            <div>
+                                <h3>Store Assistant</h3>
+                                <span>Shoppers Drug Mart</span><small>Apr 2023 - May 2023</small>
+                            </div>
+                        </div>
+                        <div class="job-title">
+                            <img class="work-image" src="images/Placeholder Image.jpg" alt="An image of the CSSS Logo">                            
+                            <div>
+                                <h3>Camp Leader</h3>
+                                <span>Fun Rec Day Camp</span><small>Aug 2022</small>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </section>

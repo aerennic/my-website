@@ -333,7 +333,7 @@ const captions = {
 
 /* ---------- technical skills filter (about) ---------- */
 const skills = {
-    Languages: ["HTML", "CSS", "Java", "Python", "C", "C++", "JavaScript", "TypeScript", "SQL", "RISCV-assembly", "Bash", "LaTeX"],
+    Languages: ["HTML", "CSS", "Java", "Python", "C", "C++", "JavaScript", "TypeScript", "SQL", "RISCV-Assembly", "Bash", "LaTeX"],
     Frameworks: ["React", "Node.js", "JUnit", "Mockito"],
     "Tools & Systems": ["Git", "GitHub", "Docker", "Cloudflare", "Figma", "Expo", "Maven", "CMake", "VS Code", "UML", "Linux", "TCP/UDP", "Neovim", "Procreate", "MATLAB"],
 };

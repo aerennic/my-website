@@ -355,29 +355,29 @@ button {
 }
 
 .about {
-  left: 4vw;
-  top: 5vh;
+  left: 10vw;
+  top: 8vh;
   width: min(700px, calc(100vw - 34px));
-  height: min(580px, calc(100vh - 50px))
+  height: min(660px, calc(100vh - 50px))
 }
 
 .experience {
-  left: 4vw;
-  top: 5vh;
-  width: min(630px, calc(100vw - 34px));
-  height: min(700px, calc(100vh - 50px))
+  left: 20vw;
+  top: 8vh;
+  width: min(700px, calc(100vw - 34px));
+  height: min(600px, calc(100vh - 50px))
 }
 
 .projects {
-  right: 4vw;
-  top: 5vh;
+  right: 10vw;
+  top: 10vh;
   width: min(800px, calc(100vw - 34px));
-  height: min(800px, calc(100vh - 50px))
+  height: min(700px, calc(100vh - 50px))
 }
 
 .contact {
-  right: 5vw;
-  top: 5vh;
+  right: 20vw;
+  top: 20vh;
   width: min(600px, calc(100vw - 34px));
   height: min(500px, calc(100vh - 50px))
 }
@@ -438,7 +438,7 @@ p {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
   line-height: 1.9;
-  margin: 0 0 5px
+  margin: 0 0 15px
 }
 
 hr {
@@ -493,6 +493,10 @@ ul {
   font-size: 22px;      
   font-weight: 500;
   color: #6b85af;
+}
+
+.technical-skills {
+  margin: 25px 0 25px
 }
 
 .entry {
@@ -599,6 +603,68 @@ ul {
 .project small {
   color: #5e80b8;
   font-family: "Plus Jakarta Sans", sans-serif
+}
+
+.experience h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;  
+  font-size: 30px;
+  font-weight: 400;
+  color: #6b85af;
+  margin: 0 0 30px 33px;
+}
+
+.experience .job-title, .experience ul { 
+  margin-left: 34px; 
+}
+
+.experience .job-title { 
+  gap: 25px; 
+  margin-bottom: 30px;
+}
+
+.experience .job-title img { 
+  width: 77px; 
+  height: 77px; 
+  object-fit: contain; 
+}
+
+.experience h3 { 
+  font-size: 19px; 
+  font-weight: 300; 
+  margin-bottom: 0
+}
+
+.experience .job-title span { 
+  font-size: 16px; 
+  font-weight: 500; 
+}
+
+.experience .job-title small { 
+  display: block; 
+  margin-top: 2px; 
+  font-size: 13px; 
+  font-weight: 400; 
+  color: #5f7aa9; 
+}
+
+.experience ul { 
+  font-size: 14px; 
+  line-height: 2.15; 
+}
+
+.experience article {
+   padding: 0 0 10px; 
+   margin: 0 0 35px; 
+  }
+
+.experience .panel-content > article:last-child { 
+  margin-bottom: 0; 
+}
+
+@media(max-width:720px) {
+  .experience h2, .experience .job-title, .experience ul { margin-left: 0; }
+  .experience h2 { font-size: 26px; margin-bottom: 30px; }
+  .experience ul { font-size: 13px; }
 }
 
 .project {
@@ -815,26 +881,6 @@ ul {
     background: transparent;
     color: #bfd7fa;
   }
-}
-
-/* Experience panel: match the Figma typeface, inset content, and list spacing. */
-.experience .panel-content,
-.experience .panel-content * { font-family: "Plus Jakarta Sans", sans-serif; }
-.experience h2 { margin: 0 0 45px 34px; font-size: 30px; font-weight: 400; letter-spacing: -1.2px; }
-.experience .job-title,
-.experience ul { margin-left: 34px; }
-.experience .job-title { gap: 34px; }
-.experience .job-title img { width: 77px; height: 77px; object-fit: contain; }
-.experience h3 { font-size: 17px; font-weight: 700; }
-.experience .job-title span { font-size: 16px; font-weight: 400; }
-.experience .job-title small { display: block; margin-top: 2px; font-size: 13px; font-weight: 400; color: #5f7aa9; }
-.experience ul { font-size: 14px; line-height: 2.15; }
-.experience article { padding: 0 0 37px; margin: 0 0 32px; }
-.experience .panel-content > article:last-child { margin-bottom: 0; }
-@media(max-width:720px) {
-  .experience h2, .experience .job-title, .experience ul { margin-left: 0; }
-  .experience h2 { font-size: 26px; margin-bottom: 30px; }
-  .experience ul { font-size: 13px; }
 }
 
 /* Contact panel: reproduce the centred 3-then-2 icon layout from Figma. */
