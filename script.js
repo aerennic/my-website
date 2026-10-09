@@ -375,3 +375,71 @@ const skillColours = {
     });
     show("Languages"); // default category
 })();
+
+
+const projects = [
+    {
+      title: "Meowmino's Delivery",
+      tags: ["Java", "Lib GDX", "Maven"],
+      image: "images/meowminos.png",
+      description: "A 2D Game created by..",
+      link: "#"
+    },
+    {
+      title: "Project 2",
+      tags: ["Tag", "Tag"],
+      image: "images/project2.png",
+      description: "Short description..",
+      link: "#"
+    },
+    {
+      title: "Project 3",
+      tags: ["Tag", "Tag"],
+      image: "images/project3.png",
+      description: "Short description..",
+      link: "#"
+    },
+    {
+      title: "Project 4",
+      tags: ["Tag", "Tag"],
+      image: "images/project4.png",
+      description: "Short description..",
+      link: "#"
+    },
+    {
+      title: "Project 5",
+      tags: ["Tag", "Tag"],
+      image: "images/project5.png",
+      description: "Short description..",
+      link: "#"
+    },
+    {
+      title: "Project 6",
+      tags: ["Tag", "Tag"],
+      image: "images/project6.png",
+      description: "Short description..",
+      link: "#"
+    }
+  ];
+ 
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+  ));
+ 
+  document.getElementById("projects-grid").innerHTML = projects.map((p) => `
+    <a class="project-card" href="${esc(p.link)}">
+      <div class="card-inner">
+        <div class="card-header">
+          <div class="card-tab"><span>${esc(p.title)}</span></div>
+          <div class="card-tags">
+            ${p.tags.map((t) => `<div class="card-tag">${esc(t)}</div>`).join("")}
+          </div>
+        </div>
+        <div class="card-body">
+          <img class="card-shot" src="${esc(p.image)}" alt="${esc(p.title)} screenshot"
+               onerror="this.src='https://placehold.co/632x357'" />
+          <div class="card-panel"><span>${esc(p.description)}</span></div>
+        </div>
+      </div>
+    </a>
+  `).join("");
