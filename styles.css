@@ -1207,3 +1207,39 @@ ul {
 .project-card:hover .card-shot-back {
   transform: translateY(-15px);
 }
+
+/* ---- status line: stop iOS stale-paint glitch ---- */
+.home-content > .status {
+  will-change: opacity;
+  transform: translateZ(0);
+  min-height: 1.4em;
+  text-align: center;
+}
+
+/* ---- clouds: soft gradients instead of animated blur ---- */
+.cloud {
+  filter: none;
+  opacity: .6;
+  background: radial-gradient(circle, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 70%);
+  will-change: transform;
+}
+.c2 {
+  background: radial-gradient(circle, rgba(255,248,204,.85) 0%, rgba(255,248,204,0) 70%);
+}
+
+/* ---- mobile ---- */
+@media (max-width: 720px) {
+  .home-content h1 {                 /* beats the 5rem desktop rule */
+    font-size: clamp(2.1rem, 9vw, 3.2rem);
+  }
+  .home-content > .status {
+    font-size: .9rem;
+    letter-spacing: -0.3px;          /* was -0.9px */
+    text-shadow: none;
+    white-space: nowrap;
+    margin: 6px 0 18px;
+  }
+  .taskbar:empty { display: none; }  /* hides the empty dark bar */
+  .desktop { padding-top: 64px; }    /* room for the sound button */
+  .sound { width: 40px; height: 40px; top: 12px; left: 12px; }
+}

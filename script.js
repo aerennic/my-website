@@ -443,3 +443,9 @@ const projects = [
       </div>
     </a>
   `).join("");
+
+  setTimeout(() => {
+    statusEl.textContent = statuses[statusIndex % statuses.length];
+    statusEl.style.opacity = 1;
+    statusIndex++;
+}, 350);   // was 300
