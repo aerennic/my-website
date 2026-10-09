@@ -1243,3 +1243,52 @@ ul {
   .desktop { padding-top: 64px; }    /* room for the sound button */
   .sound { width: 40px; height: 40px; top: 12px; left: 12px; }
 }
+
+@media (max-width: 720px) {
+  /* centre the folder vertically instead of pinning it to the top */
+  .desktop {
+    display: flex;
+    align-items: center;
+    padding: 56px 12px 40px;
+  }
+
+  /* everything inside the frame scales with the frame's width */
+  .home {
+    container-type: inline-size;
+    flex: none;
+  }
+
+  .home-content {
+    inset: 30% 5% 8%;
+    gap: 3cqw;
+    justify-content: center;
+  }
+
+  .home-content h1 {
+    font-size: 9.5cqw;
+    white-space: nowrap;
+  }
+
+  .home-content > .status {
+    font-size: max(13px, 3.6cqw);
+    margin: 0;
+    min-height: 1.4em;
+    white-space: nowrap;
+  }
+
+  .launchers {
+    width: 100%;
+    gap: 0;
+    justify-content: space-around;
+  }
+
+  .launchers img {
+    width: 13cqw;
+    height: 13cqw;
+  }
+
+  .launchers button {
+    font-size: max(11px, 3.1cqw);
+    gap: 1cqw;
+  }
+}
