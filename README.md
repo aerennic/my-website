@@ -1,2 +1,7 @@
 # my-website
-#### visit my website here! https://aerennic.github.io/my-website/ (´▽`ʃ♡ƪ)
+### About
+A small project that I spent way too much time on :')  
+Still a work in progress. Actively being updated!  
+
+### Links
+Visit my website here: [meganchau.com](https://meganchau.com) (´▽`ʃ♡ƪ)
