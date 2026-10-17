@@ -379,6 +379,13 @@ button {
   height: min(500px, calc(100vh - 50px))
 }
 
+.explore {
+  top: 20vh;
+  right: 30vh;
+  width: min(600px, calc(100vw - 34px));
+  height: min(500px, calc(100vh - 50px))
+}
+
 .home-content h1{
   margin: 0;
   color: #595959;
@@ -1305,6 +1312,10 @@ ul {
 }
 
 .desktop-icon {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
   display: flex;
   flex-direction: column;   /* icon on top, title below */
   align-items: center;
