@@ -381,9 +381,9 @@ button {
 
 .explore {
   top: 20vh;
-  right: 30vh;
-  width: min(700px, calc(100vw - 34px));
-  height: min(600px, calc(100vh - 50px))
+  right: 30vw;
+  width: min(800px, calc(100vw - 34px));
+  height: min(650px, calc(100vh - 50px))
 }
 
 .home-content h1{
@@ -1329,8 +1329,8 @@ ul {
 }
 
 .desktop-icon img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   pointer-events: none;
 }
@@ -1414,6 +1414,14 @@ ul {
   border-radius: 4px;
 }
 
+.artwork-big {
+  display: block;
+  width: 85%;
+  height: auto;
+  border-radius: 4px;
+  padding-left: 20px;
+}
+
 .collage-content figcaption {
   margin-top: 6px;
   font-family: "Roboto Mono", monospace;
@@ -1437,4 +1445,36 @@ ul {
   .artwork-collage {
     column-count: 1;
   }
+}
+
+.graphics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.graphic-item {
+  margin: 0;
+  padding: 8px 8px 10px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.graphic-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.graphic-item figcaption {
+  margin-top: 6px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.65rem;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .graphics-grid { grid-template-columns: 1fr; }
 }
