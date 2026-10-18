@@ -740,37 +740,37 @@ ul {
   display: inline-block
 }
 
-.contacts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px 10px;
-  text-align: center
+.contact .contacts a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 17px;
+  transition: transform .2s ease;
 }
 
-.contacts a {
-  text-decoration: none;
-  color: #617289;
-  font-family: Arial, sans-serif;
-  font-size: 20px
+.contact .contacts a:hover,
+.contact .contacts a:focus-visible {
+  transform: translateY(-4px);
 }
 
-.contacts b {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background: #5d7bb0;
-  color: #d2e5ff;
-  font-size: 40px;
-  display: grid;
-  place-items: center;
-  margin: auto auto 3px
+.contact .contacts img {
+  width: 86px;
+  height: 86px;
+  object-fit: contain;
+  margin-bottom: 6px;
 }
 
-.contacts small {
-  display: block;
-  font-size: 15px;
-  color: #72829b
+.contact .contacts small {
+  margin: 0;
+  font-size: 13px;
+  color: #7da2b9;
 }
+
+.contact .contacts a[target="_blank"] small {
+  text-decoration: underline;
+}
+
 
 .note {
   text-align: center;
@@ -1082,7 +1082,7 @@ ul {
   gap: 40px 32px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1100px) {
   .projects-grid { grid-template-columns: 1fr; }
 }
 
@@ -1477,4 +1477,54 @@ ul {
 
 @media (max-width: 520px) {
   .graphics-grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 901px) {
+  .home {
+    container-type: inline-size;
+    width: min(879px, calc(100vw - 260px));
+  }
+  .home-content h1 { font-size: 9.5cqw; white-space: nowrap; }
+  .home-content > .status { font-size: max(26px, 2.2cqw); }
+  .launchers { gap: 3.4cqw; }
+  .launchers img { width: 9.7cqw; height: 9.7cqw; }
+  .launchers button { font-size: max(13px, 1.9cqw); }
+}
+
+@media (max-width: 900px) {
+  .panel header { height: 48px; cursor: default; }
+  .panel header button { font-size: 28px; min-width: 44px; min-height: 44px; }
+  /* .panel { height: calc(100dvh - 118px) !important; } */
+}
+
+@media (max-width: 900px) {
+  .desktop {
+    flex-direction: column;   
+    justify-content: center;
+    gap: 20px;
+  }
+  .desktop-buttons {
+    position: static;
+    flex-direction: row;
+    width: auto;
+    gap: 24px;
+    justify-content: center;
+  }
+  .desktop-icon img { width: 52px; height: 52px; }
+}
+
+.projects { right: 10vw; width: min(1100px, 80vw); }
+.explore  { right: 15vw; width: min(700px, 70vw); }  
+.contact  { right: 15vw; width: min(600px, 70vw); }
+
+.artwork-collage { column-count: auto; column-width: 200px; }
+
+
+
+
+/* hover effects shouldn't stick on touch screens */
+@media (hover: none) {
+  .project-card:hover,
+  .collage-content:hover,
+  .launchers button:hover { transform: none; }
 }
