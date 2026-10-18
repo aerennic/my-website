@@ -188,9 +188,20 @@ const boot = document.querySelector("#boot");
                 //     handle.addEventListener("pointerup", () => (resizing = false));
                 // }
             });
-
+            
             const soundBtn = document.getElementById("sound");
+            const clickAudio = document.getElementById("click-audio");
             let soundOn = true;
+
+            function playClick() {
+            if (!soundOn) return;
+            clickAudio.currentTime = 0;        // restart so rapid clicks retrigger
+            clickAudio.play().catch(() => {}); // ignore blocked or interrupted playback
+            }
+
+            document.addEventListener("click", (e) => {
+            if (e.target.closest("button")) playClick();
+            });
 
             soundBtn.addEventListener("click", () => {
             soundOn = !soundOn;
