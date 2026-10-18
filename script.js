@@ -188,28 +188,14 @@ const boot = document.querySelector("#boot");
                 //     handle.addEventListener("pointerup", () => (resizing = false));
                 // }
             });
-            const clickAudio = document.querySelector("#click-audio");
-            let soundIsOn = true;
- 
-            function playClick() {
-                if (!soundIsOn) return;
-                clickAudio.currentTime = 0; // restart so rapid clicks retrigger properly
-                clickAudio.play();
-            }
- 
-            document.addEventListener("click", (e) => {
-                if (e.target.closest("button")) {
-                    playClick();
-                }
+
+            const soundBtn = document.getElementById("sound");
+            let soundOn = true;
+
+            soundBtn.addEventListener("click", () => {
+            soundOn = !soundOn;
+            soundBtn.setAttribute("aria-pressed", String(soundOn));
             });
- 
-            const soundButton = document.querySelector("#sound");
-            const soundIcon = soundButton.querySelector("img");
-            soundButton.onclick = () => {
-                soundIsOn = !soundIsOn;
-                soundIcon.src = soundIsOn ? "images/volume.png" : "images/volume off.png";
-                soundButton.setAttribute("aria-label", soundIsOn ? "Turn sound off" : "Turn sound on");
-            };
  
             /* ---------- right-click desktop context menu ---------- */
             const menuItems = [
