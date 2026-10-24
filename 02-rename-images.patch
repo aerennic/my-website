@@ -1,0 +1,518 @@
+diff --git a/images/about icon.png b/images/about-icon.png
+similarity index 100%
+rename from images/about icon.png
+rename to images/about-icon.png
+diff --git a/images/about picture 1.jpg b/images/about-picture-1.jpg
+similarity index 100%
+rename from images/about picture 1.jpg
+rename to images/about-picture-1.jpg
+diff --git a/images/about picture 2.jpg b/images/about-picture-2.jpg
+similarity index 100%
+rename from images/about picture 2.jpg
+rename to images/about-picture-2.jpg
+diff --git a/images/about picture 3.png b/images/about-picture-3.png
+similarity index 100%
+rename from images/about picture 3.png
+rename to images/about-picture-3.png
+diff --git a/images/art/Day 1_ Potion Parlour.png b/images/art/day-1-potion-parlour.png
+similarity index 100%
+rename from images/art/Day 1_ Potion Parlour.png
+rename to images/art/day-1-potion-parlour.png
+diff --git a/images/art/Day 2_ Info Session.png b/images/art/day-2-info-session.png
+similarity index 100%
+rename from images/art/Day 2_ Info Session.png
+rename to images/art/day-2-info-session.png
+diff --git a/images/art/Day 2_ Paint the Night.png b/images/art/day-2-paint-the-night.png
+similarity index 100%
+rename from images/art/Day 2_ Paint the Night.png
+rename to images/art/day-2-paint-the-night.png
+diff --git a/images/art/Day 3_ Pac-Macro.png b/images/art/day-3-pac-macro.png
+similarity index 100%
+rename from images/art/Day 3_ Pac-Macro.png
+rename to images/art/day-3-pac-macro.png
+diff --git a/images/art/Day 4_ Mad Hatter_s Lounge.png b/images/art/day-4-mad-hatters-lounge.png
+similarity index 100%
+rename from images/art/Day 4_ Mad Hatter_s Lounge.png
+rename to images/art/day-4-mad-hatters-lounge.png
+diff --git a/images/art/Day 5_ Midnight Madness.png b/images/art/day-5-midnight-madness.png
+similarity index 100%
+rename from images/art/Day 5_ Midnight Madness.png
+rename to images/art/day-5-midnight-madness.png
+diff --git a/images/art/Ded Jepi sticker.webp b/images/art/ded-jepi-sticker.webp
+similarity index 100%
+rename from images/art/Ded Jepi sticker.webp
+rename to images/art/ded-jepi-sticker.webp
+diff --git a/images/art/FROSH_WEEK_2026.png b/images/art/frosh-week-2026.png
+similarity index 100%
+rename from images/art/FROSH_WEEK_2026.png
+rename to images/art/frosh-week-2026.png
+diff --git a/images/art/Homeless Jepi.webp b/images/art/homeless-jepi.webp
+similarity index 100%
+rename from images/art/Homeless Jepi.webp
+rename to images/art/homeless-jepi.webp
+diff --git a/images/art/hu tao drawing.png b/images/art/hu-tao-drawing-1.png
+similarity index 100%
+rename from images/art/hu tao drawing.png
+rename to images/art/hu-tao-drawing-1.png
+diff --git a/images/art/hu tao drawing 2.png b/images/art/hu-tao-drawing-2.png
+similarity index 100%
+rename from images/art/hu tao drawing 2.png
+rename to images/art/hu-tao-drawing-2.png
+diff --git a/images/art/Jepi Sticker.webp b/images/art/jepi-sticker.webp
+similarity index 100%
+rename from images/art/Jepi Sticker.webp
+rename to images/art/jepi-sticker.webp
+diff --git a/images/art/meowmino on bike.png b/images/art/meowmino-on-bike.png
+similarity index 100%
+rename from images/art/meowmino on bike.png
+rename to images/art/meowmino-on-bike.png
+diff --git a/images/art/meowmino's deliver title.png b/images/art/meowminos-delivery-title.png
+similarity index 100%
+rename from images/art/meowmino's deliver title.png
+rename to images/art/meowminos-delivery-title.png
+diff --git a/images/art/miku drawing.png b/images/art/miku-drawing.png
+similarity index 100%
+rename from images/art/miku drawing.png
+rename to images/art/miku-drawing.png
+diff --git a/images/art/Final-Pamphlet_Back.png b/images/art/pamphlet-back-final.png
+similarity index 100%
+rename from images/art/Final-Pamphlet_Back.png
+rename to images/art/pamphlet-back-final.png
+diff --git a/images/art/Pamphlet_draft_-_Front.png b/images/art/pamphlet-front-draft.png
+similarity index 100%
+rename from images/art/Pamphlet_draft_-_Front.png
+rename to images/art/pamphlet-front-draft.png
+diff --git a/images/art/shen he drawing.png b/images/art/shenhe-drawing.png
+similarity index 100%
+rename from images/art/shen he drawing.png
+rename to images/art/shenhe-drawing.png
+diff --git a/images/Coco logo.jpg b/images/coco-logo-old.jpg
+similarity index 100%
+rename from images/Coco logo.jpg
+rename to images/coco-logo-old.jpg
+diff --git a/images/Coco Logo.png b/images/coco-logo.png
+similarity index 100%
+rename from images/Coco Logo.png
+rename to images/coco-logo.png
+diff --git a/images/contact email.png b/images/contact-email.png
+similarity index 100%
+rename from images/contact email.png
+rename to images/contact-email.png
+diff --git a/images/contact github.png b/images/contact-github.png
+similarity index 100%
+rename from images/contact github.png
+rename to images/contact-github.png
+diff --git a/images/contact linkedin.png b/images/contact-linkedin.png
+similarity index 100%
+rename from images/contact linkedin.png
+rename to images/contact-linkedin.png
+diff --git a/images/contact outlook.png b/images/contact-outlook.png
+similarity index 100%
+rename from images/contact outlook.png
+rename to images/contact-outlook.png
+diff --git a/images/contact phone.png b/images/contact-phone.png
+similarity index 100%
+rename from images/contact phone.png
+rename to images/contact-phone.png
+diff --git a/images/CSSS logo.jpg b/images/csss-logo.jpg
+similarity index 100%
+rename from images/CSSS logo.jpg
+rename to images/csss-logo.jpg
+diff --git a/images/Default Risk Predictor Screenshot 2.png b/images/default-risk-predictor-screenshot-2.png
+similarity index 100%
+rename from images/Default Risk Predictor Screenshot 2.png
+rename to images/default-risk-predictor-screenshot-2.png
+diff --git a/images/Default Risk Predictor Screenshot.png b/images/default-risk-predictor-screenshot.png
+similarity index 100%
+rename from images/Default Risk Predictor Screenshot.png
+rename to images/default-risk-predictor-screenshot.png
+diff --git a/images/explore icon.png b/images/explore-icon.png
+similarity index 100%
+rename from images/explore icon.png
+rename to images/explore-icon.png
+diff --git a/images/homepage folder.png b/images/homepage-folder.png
+similarity index 100%
+rename from images/homepage folder.png
+rename to images/homepage-folder.png
+diff --git a/images/Jobly Home Page.png b/images/jobly-home-page.png
+similarity index 100%
+rename from images/Jobly Home Page.png
+rename to images/jobly-home-page.png
+diff --git a/images/jobly site.png b/images/jobly-site.png
+similarity index 100%
+rename from images/jobly site.png
+rename to images/jobly-site.png
+diff --git a/images/Meowmino's Start Page.png b/images/meowminos-start-page.png
+similarity index 100%
+rename from images/Meowmino's Start Page.png
+rename to images/meowminos-start-page.png
+diff --git a/images/meowmino's trailer.png b/images/meowminos-trailer.png
+similarity index 100%
+rename from images/meowmino's trailer.png
+rename to images/meowminos-trailer.png
+diff --git a/images/Neovim Screenshot.png b/images/neovim-screenshot.png
+similarity index 100%
+rename from images/Neovim Screenshot.png
+rename to images/neovim-screenshot.png
+diff --git a/images/Placeholder Image.jpg b/images/placeholder-image.jpg
+similarity index 100%
+rename from images/Placeholder Image.jpg
+rename to images/placeholder-image.jpg
+diff --git a/images/PNE logo.jpg b/images/pne-logo.jpg
+similarity index 100%
+rename from images/PNE logo.jpg
+rename to images/pne-logo.jpg
+diff --git a/images/profile picture.png b/images/profile-picture.png
+similarity index 100%
+rename from images/profile picture.png
+rename to images/profile-picture.png
+diff --git a/images/resume icon.png b/images/resume-icon.png
+similarity index 100%
+rename from images/resume icon.png
+rename to images/resume-icon.png
+diff --git a/images/Shoppers Logo.png b/images/shoppers-logo.png
+similarity index 100%
+rename from images/Shoppers Logo.png
+rename to images/shoppers-logo.png
+diff --git a/images/site icon.png b/images/site-icon.png
+similarity index 100%
+rename from images/site icon.png
+rename to images/site-icon.png
+diff --git a/images/Tour Story Screenshot.jpg b/images/tour-story-screenshot.jpg
+similarity index 100%
+rename from images/Tour Story Screenshot.jpg
+rename to images/tour-story-screenshot.jpg
+diff --git a/images/volume off.png b/images/volume-off.png
+similarity index 100%
+rename from images/volume off.png
+rename to images/volume-off.png
+diff --git a/images/volume on.png b/images/volume-on.png
+similarity index 100%
+rename from images/volume on.png
+rename to images/volume-on.png
+diff --git a/index.html b/index.html
+index 53ce24c..7cd6b62 100644
+--- a/index.html
++++ b/index.html
+@@ -10,8 +10,8 @@
+         <meta property="og:title" content="meg's space" />
+         <meta property="og:description" content="Megan Chau's portfolio: projects, experience and artwork." />
+         <meta property="og:url" content="https://meganchau.com/" />
+-        <meta property="og:image" content="https://meganchau.com/images/profile%20picture.png" />
+-        <link rel="icon" type="image/png" href="images/site icon.png" />
++        <meta property="og:image" content="https://meganchau.com/images/profile-picture.png" />
++        <link rel="icon" type="image/png" href="images/site-icon.png" />
+         <link rel="preconnect" href="https://fonts.googleapis.com" />
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Pridi:wght@300;500&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+@@ -31,18 +31,18 @@
+                 <span class="cloud c3"></span>
+             </div>
+             <button class="sound" id="sound" aria-label="Toggle sound" aria-pressed="true">
+-                <img class="icon-on" src="images/volume on.png" alt="" />
+-                <img class="icon-off" src="images/volume off.png" alt="" />
++                <img class="icon-on" src="images/volume-on.png" alt="" />
++                <img class="icon-off" src="images/volume-off.png" alt="" />
+             </button>            
+             <audio id="click-audio" src="audio/click.mp3"></audio>
+             <section class="home" aria-label="Welcome">
+-                <img class="browser-frame" src="images/homepage folder.png" alt="" />
++                <img class="browser-frame" src="images/homepage-folder.png" alt="" />
+                 <div class="home-content">
+                     <h1>hi, i’m <em>megan</em></h1>
+                     <p class="status" id="status"></p>
+                     <nav class="launchers" aria-label="Portfolio sections">                                                                                 
+                         <button data-open="about">
+-                            <img src="images/about icon.png" alt="" />
++                            <img src="images/about-icon.png" alt="" />
+                             <span>about</span>
+                         </button>
+                         <button data-open="experience">
+@@ -68,7 +68,7 @@
+                 </header>
+                 <div class="panel-content">
+                     <div class="profile">
+-                    <img class="avatar" src="images/profile picture.png" alt="Megan Chau's profile picture">                        <div>
++                    <img class="avatar" src="images/profile-picture.png" alt="Megan Chau's profile picture">                        <div>
+                             <h2>Megan Chau</h2>
+                             <p>Computing Science Student @ SFU</p>
+                         </div>
+@@ -100,9 +100,9 @@
+                     <!--More about me!!!-->
+                     <h2 class="display-title">ABOUT ME!</h2>
+                     <div class="photo-collage">
+-                        <img class="photo-collage-image" data-key="image1" src="images/about picture 3.png" alt="A picture of me volunteering at FROSH 2025" />
+-                        <img class="photo-collage-image" data-key="image2" src="images/about picture 1.jpg" alt="A picture of me with my handcrafted bouquet" />
+-                        <img class="photo-collage-image" data-key="image3" src="images/about picture 2.jpg" alt="A picture of my drawing process" />
++                        <img class="photo-collage-image" data-key="image1" src="images/about-picture-3.png" alt="A picture of me volunteering at FROSH 2025" />
++                        <img class="photo-collage-image" data-key="image2" src="images/about-picture-1.jpg" alt="A picture of me with my handcrafted bouquet" />
++                        <img class="photo-collage-image" data-key="image3" src="images/about-picture-2.jpg" alt="A picture of my drawing process" />
+                         <p class="caption"></p>
+                     </div>
+ 
+@@ -148,7 +148,7 @@
+                     <h2>LEADERSHIP</h2>
+                     <article>
+                         <div class="job-title">
+-                            <img class="work-image" src="images/CSSS logo.jpg" alt="CSSS logo">
++                            <img class="work-image" src="images/csss-logo.jpg" alt="CSSS logo">
+                             <div>
+                                 <h3>Treasurer</h3>
+                                 <span>Computing Science Student Society</span><small>May 2026 - Present</small>
+@@ -158,14 +158,14 @@
+                     <h2>WORK EXPERIENCE</h2>
+                     <article>
+                         <div class="job-title">
+-                            <img class="work-image" src="images/Coco Logo.png" alt="CoCo Fresh Tea &amp; Juice logo">                            
++                            <img class="work-image" src="images/coco-logo.png" alt="CoCo Fresh Tea &amp; Juice logo">                            
+                             <div>
+                                 <h3>Barista, Cashier</h3>
+                                 <span>CoCo Fresh Tea &amp; Juice</span><small>Oct 2025 - Present</small>
+                             </div>
+                         </div>
+                         <div class="job-title">
+-                            <img class="work-image" src="images/PNE logo.jpg" alt="PNE logo">
++                            <img class="work-image" src="images/pne-logo.jpg" alt="PNE logo">
+                             <div>
+                                 <h3>Ride Attendant</h3>
+                                 <span>Pacific National Exhibition (PNE)</span><small>July - Sept 2025</small>
+@@ -175,35 +175,35 @@
+                     <h2>VOLUNTEERING</h2>
+                     <article>
+                         <div class="job-title">
+-                            <img class="work-image" src="images/CSSS logo.jpg" alt="CSSS logo">                            
++                            <img class="work-image" src="images/csss-logo.jpg" alt="CSSS logo">                            
+                             <div>
+                                 <h3>CSSS Multimedia Team</h3>
+                                 <span>Computing Science Student Society</span><small>Aug 2026 - Present</small>
+                             </div>
+                         </div>
+                         <div class="job-title">
+-                            <img class="work-image" src="images/CSSS logo.jpg" alt="CSSS logo">                            
++                            <img class="work-image" src="images/csss-logo.jpg" alt="CSSS logo">                            
+                             <div>
+                                 <h3>FROSH Leader</h3>
+                                 <span>Computing Science Student Society</span><small>Oct 2025</small>
+                             </div>
+                         </div>
+                         <div class="job-title">
+-                            <img class="work-image" src="images/Shoppers Logo.png" alt="Shoppers Drug Mart logo">                            
++                            <img class="work-image" src="images/shoppers-logo.png" alt="Shoppers Drug Mart logo">                            
+                             <div>
+                                 <h3>Pharmacy Assistant</h3>
+                                 <span>Shoppers Drug Mart</span><small>Oct 2023 - Nov 2023</small>
+                             </div>
+                         </div>                        
+                         <div class="job-title">
+-                            <img class="work-image" src="images/Shoppers Logo.png" alt="Shoppers Drug Mart logo">                            
++                            <img class="work-image" src="images/shoppers-logo.png" alt="Shoppers Drug Mart logo">                            
+                             <div>
+                                 <h3>Store Assistant</h3>
+                                 <span>Shoppers Drug Mart</span><small>Apr 2023 - May 2023</small>
+                             </div>
+                         </div>
+                         <div class="job-title">
+-                            <img class="work-image" src="images/Placeholder Image.jpg" alt="">                            
++                            <img class="work-image" src="images/placeholder-image.jpg" alt="">                            
+                             <div>
+                                 <h3>Camp Leader</h3>
+                                 <span>Fun Rec Day Camp</span><small>Aug 2022</small>
+@@ -231,7 +231,7 @@
+                                     </div>
+                                 </div>
+                                 <div class="card-body">
+-                                    <img class="card-shot" src="images/Meowmino's Start Page.png" alt="Screenshot of Meowmino's Delivery start page">
++                                    <img class="card-shot" src="images/meowminos-start-page.png" alt="Screenshot of Meowmino's Delivery start page">
+                                     <div class="card-panel"><span>A 2D arcade game where you deliver pizzas through a maze while dodging obstacles.</span></div>
+                                 </div>
+                             </div>
+@@ -246,7 +246,7 @@
+                                     </div>
+                                 </div>
+                                 <div class="card-body">
+-                                    <img class="card-shot" src="images/Default Risk Predictor Screenshot.png" alt="Screenshot of Default Risk Predictor Home Page">
++                                    <img class="card-shot" src="images/default-risk-predictor-screenshot.png" alt="Screenshot of Default Risk Predictor Home Page">
+                                     <div class="card-panel"><span>Predicts the likelihood that a home-credit applicant will default on a loan.</span></div>
+                                 </div>
+                             </div>
+@@ -263,7 +263,7 @@
+                                     </div>
+                                 </div>
+                                 <div class="card-body">
+-                                    <img class="card-shot" src="images/Neovim Screenshot.png" alt="Screenshot of Neovim">
++                                    <img class="card-shot" src="images/neovim-screenshot.png" alt="Screenshot of Neovim">
+                                     <div class="card-panel"><span> A fully functional command-line shell in C supporting foreground and background process execution</span></div>
+                                 </div>
+                             </div>
+@@ -279,7 +279,7 @@
+                                     </div>
+                                 </div>
+                                 <div class="card-body">
+-                                    <img class="card-shot" src="images/Neovim Screenshot.png" alt="Screenshot of Neovim">
++                                    <img class="card-shot" src="images/neovim-screenshot.png" alt="Screenshot of Neovim">
+                                     <div class="card-panel"><span>A multi-client TCP server in C using POSIX socket APIs, supporting 100 concurrent clients with
+ guaranteed message ordering across all peers</span></div>
+                                 </div>
+@@ -296,7 +296,7 @@ guaranteed message ordering across all peers</span></div>
+                                     </div>
+                                 </div>
+                                 <div class="card-body">
+-                                    <img class="card-shot" src="images/Jobly Home Page.png" alt="Screenshot of Jobly's Home Page">
++                                    <img class="card-shot" src="images/jobly-home-page.png" alt="Screenshot of Jobly's Home Page">
+                                     <div class="card-panel"><span>Job hunting is exhausting. Jobly makes resume optimization as simple as using spell-check.</span></div>
+                                 </div>
+                             </div>
+@@ -312,7 +312,7 @@ guaranteed message ordering across all peers</span></div>
+                                     </div>
+                                 </div>
+                                 <div class="card-body">
+-                                    <img class="card-shot" src="images/Tour Story Screenshot.jpg" alt="Screenshot of Tour Story">
++                                    <img class="card-shot" src="images/tour-story-screenshot.jpg" alt="Screenshot of Tour Story">
+                                     <div class="card-panel"><span>A mobile app that turns photos of tourist attractions into <br/>AI-generated stories.</span></div>
+                                 </div>
+                             </div>
+@@ -332,27 +332,27 @@ guaranteed message ordering across all peers</span></div>
+                 <div class="panel-content">
+                     <div class="contacts">
+                         <a href="mailto:meganchau0912@gmail.com">
+-                            <img src="images/contact email.png" alt="">
++                            <img src="images/contact-email.png" alt="">
+                             <span>email</span>
+                             <small>meganchau0912@gmail.com</small>
+                         </a>
+                         <a href="https://github.com/aerennic" target="_blank" rel="noopener noreferrer">
+-                            <img src="images/contact github.png" alt="">
++                            <img src="images/contact-github.png" alt="">
+                             <span>github</span>
+                             <small>aerennic</small>
+                         </a>
+                         <a href="https://linkedin.com/in/megan-chau05" target="_blank" rel="noopener noreferrer">
+-                            <img src="images/contact linkedin.png" alt="">
++                            <img src="images/contact-linkedin.png" alt="">
+                             <span>linkedin</span>
+                             <small>megan chau</small>
+                         </a>
+                         <a href="mailto:mhc23@sfu.ca">
+-                            <img src="images/contact outlook.png" alt="">
++                            <img src="images/contact-outlook.png" alt="">
+                             <span>SFU email</span>
+                             <small>mhc23@sfu.ca</small>
+                         </a>
+                         <a href="tel:+16043199085">
+-                            <img src="images/contact phone.png" alt="">
++                            <img src="images/contact-phone.png" alt="">
+                             <span>phone</span>
+                             <small>(604) 319-9085</small>
+                         </a>
+@@ -376,59 +376,59 @@ guaranteed message ordering across all peers</span></div>
+                         <h2>GRAPHICS</h2>
+                         <div class="graphics-grid">
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Pamphlet_draft_-_Front.png" alt="Pamphlet design FRONT" loading="lazy">
++                                <img class="artwork" src="images/art/pamphlet-front-draft.png" alt="Pamphlet design FRONT" loading="lazy">
+                                 <figcaption>Pamphlet Designs for FROSH! (FRONT)</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Final-Pamphlet_Back.png" alt="Pamphlet design BACK" loading="lazy">
++                                <img class="artwork" src="images/art/pamphlet-back-final.png" alt="Pamphlet design BACK" loading="lazy">
+                                 <figcaption>Pamphlet Designs for FROSH! (BACK)</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Day 1_ Potion Parlour.png" alt="Picture of FROSH Day 1 poster" loading="lazy">
++                                <img class="artwork" src="images/art/day-1-potion-parlour.png" alt="Picture of FROSH Day 1 poster" loading="lazy">
+                                 <figcaption>Posters for Frosh 2026! Huge credits to Amelia :3</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Day 2_ Info Session.png" alt="Picture of FROSH Day 2 poster" loading="lazy">
++                                <img class="artwork" src="images/art/day-2-info-session.png" alt="Picture of FROSH Day 2 poster" loading="lazy">
+                                 <figcaption>Posters for Frosh 2026! Huge credits to Amelia :3</figcaption>
+                             </figure>   
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Day 2_ Paint the Night.png" alt="Picture of FROSH Day 2 poster" loading="lazy">
++                                <img class="artwork" src="images/art/day-2-paint-the-night.png" alt="Picture of FROSH Day 2 poster" loading="lazy">
+                                 <figcaption>Posters for Frosh 2026! Huge credits to Amelia :3</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Day 3_ Pac-Macro.png" alt="Picture of FROSH Day 3 poster" loading="lazy">
++                                <img class="artwork" src="images/art/day-3-pac-macro.png" alt="Picture of FROSH Day 3 poster" loading="lazy">
+                                 <figcaption>Posters for Frosh 2026! Huge credits to Amelia :3</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Day 4_ Mad Hatter_s Lounge.png" alt="Picture of FROSH Day 4 poster" loading="lazy">
++                                <img class="artwork" src="images/art/day-4-mad-hatters-lounge.png" alt="Picture of FROSH Day 4 poster" loading="lazy">
+                                 <figcaption>Posters for Frosh 2026! Huge credits to Amelia :3</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Day 5_ Midnight Madness.png" alt="Picture of FROSH Day 5 poster" loading="lazy">
++                                <img class="artwork" src="images/art/day-5-midnight-madness.png" alt="Picture of FROSH Day 5 poster" loading="lazy">
+                                 <figcaption>Posters for Frosh 2026! Huge credits to Amelia :3</figcaption>
+                             </figure>
+                                                     <figure class="graphic-item">
+-                                <img class="artwork-big" src="images/art/meowmino on bike.png" alt="Meowmino, the Meowmino's Delivery character, on a bike" loading="lazy">
++                                <img class="artwork-big" src="images/art/meowmino-on-bike.png" alt="Meowmino, the Meowmino's Delivery character, on a bike" loading="lazy">
+                                 <figcaption>Meowmino's Delivery Character Design</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Jepi Sticker.webp" alt="Image of Jepi looking at raspberry pie" loading="lazy">
++                                <img class="artwork" src="images/art/jepi-sticker.webp" alt="Image of Jepi looking at raspberry pie" loading="lazy">
+                                 <figcaption>Sticker Design for Fall Hacks 2026!</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Homeless Jepi.webp" alt="Image of Jepi" loading="lazy">
++                                <img class="artwork" src="images/art/homeless-jepi.webp" alt="Image of Jepi" loading="lazy">
+                                 <figcaption>Sticker Design for Fall Hacks 2026!</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/Ded Jepi sticker.webp" alt="Image of Jepi on the floor" loading="lazy">
++                                <img class="artwork" src="images/art/ded-jepi-sticker.webp" alt="Image of Jepi on the floor" loading="lazy">
+                                 <figcaption>Sticker Design for Fall Hacks 2026!</figcaption>
+                             </figure>
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/meowmino's deliver title.png" alt="Image of Meowmino's Delivery Title Screen" loading="lazy">
++                                <img class="artwork" src="images/art/meowminos-delivery-title.png" alt="Image of Meowmino's Delivery Title Screen" loading="lazy">
+                                 <figcaption>Meowmino's Delivery Title Screen</figcaption>
+                             </figure>  
+                             <figure class="graphic-item">
+-                                <img class="artwork" src="images/art/FROSH_WEEK_2026.png" alt="Image of FROSH Poster" loading="lazy">
++                                <img class="artwork" src="images/art/frosh-week-2026.png" alt="Image of FROSH Poster" loading="lazy">
+                                 <figcaption>Poster Design for FROSH 2026</figcaption>
+                             </figure>                              
+                         </div>
+@@ -438,19 +438,19 @@ guaranteed message ordering across all peers</span></div>
+                         <h2>ARTWORKS</h2>
+                         <div class="artwork-collage">                
+                             <figure class="collage-content">
+-                                <img class="artwork" src="images/art/hu tao drawing.png" alt="Drawing of Hu Tao from Genshin Impact" loading="lazy">
++                                <img class="artwork" src="images/art/hu-tao-drawing-1.png" alt="Drawing of Hu Tao from Genshin Impact" loading="lazy">
+                                 <figcaption>A quick drawing of Hutao when I was a little too obsessed with Genshin...</figcaption>
+                             </figure>
+                             <figure class="collage-content">
+-                                <img class="artwork" src="images/art/miku drawing.png" alt="Drawing of Hatsune Miku" loading="lazy">
++                                <img class="artwork" src="images/art/miku-drawing.png" alt="Drawing of Hatsune Miku" loading="lazy">
+                                 <figcaption>I love drawing Miku</figcaption>
+                             </figure>                        
+                             <figure class="collage-content">
+-                                <img class="artwork" src="images/art/shen he drawing.png" alt="Drawing of Shen He from Genshin Impact" loading="lazy">
++                                <img class="artwork" src="images/art/shenhe-drawing.png" alt="Drawing of Shen He from Genshin Impact" loading="lazy">
+                                 <figcaption>My favourite drawing by far! Love Shenhe :)</figcaption>
+                             </figure>                            
+                             <figure class="collage-content">
+-                                <img class="artwork" src="images/art/hu tao drawing 2.png" alt="Drawing of Hu tao from Genshin Impact" loading="lazy">
++                                <img class="artwork" src="images/art/hu-tao-drawing-2.png" alt="Drawing of Hu tao from Genshin Impact" loading="lazy">
+                                 <figcaption>Can you tell I love drawing Hutao?</figcaption>
+                             </figure>
+                         </div>
+@@ -460,11 +460,11 @@ guaranteed message ordering across all peers</span></div>
+             <nav class="taskbar" id="taskbar" aria-label="Open tabs"></nav>
+             <div class="desktop-buttons">
+                 <a class="desktop-icon" href="https://drive.google.com/file/d/1dPqtBRgFA15nqOODikTUOhsNS0c_HohK/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open resume (opens in a new tab)">
+-                    <img src="images/resume icon.png" alt="" />
++                    <img src="images/resume-icon.png" alt="" />
+                     <span>resume</span>
+                 </a>
+                 <button class="desktop-icon" data-open="explore" aria-label="Open explore">
+-                    <img src="images/explore icon.png" alt="" />
++                    <img src="images/explore-icon.png" alt="" />
+                     <span>explore</span>
+                 </button>
+             </div>
