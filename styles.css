@@ -99,7 +99,7 @@ body {
 /* ---------- status line ---------- */
 .status {
   font-size: .95rem;
-  color: #909090;
+  color: #5c5c5c;
   min-height: 1.2em;
   transition: opacity .3s ease;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -212,7 +212,7 @@ button {
 .home-content>p {
   font-size: clamp(1.5rem, 2vw, 1.85rem);
   margin: 14px 0 41px;
-  color: #909090;
+  color: #5c5c5c;
   line-height: 1;
   text-shadow: 0 4px 2.5px rgba(0, 0, 0, 0.06);
   font-family: Pridi;
@@ -232,7 +232,7 @@ button {
   padding: 0;
   border: 0;
   background: none;
-  color: #818181;
+  color: #5c5c5c;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -281,6 +281,9 @@ button {
 }
 
 .panel.minimized { display: none }
+
+.panel:focus { outline: none; }
+.panel:focus-visible { outline: 2px solid #6b85af; outline-offset: -4px; }
 
 @keyframes show {
   from {
@@ -332,28 +335,6 @@ button {
 }
 
 .panel header button:hover { transform: scale(1.15) }
-
-/* ---------- resize handle ---------- */
-.resize-handle {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 18px;
-  height: 18px;
-  cursor: nwse-resize;
-  touch-action: none;
-}
-.resize-handle::after {
-  content: "";
-  position: absolute;
-  right: 4px;
-  bottom: 4px;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid #6b6c6e88;
-  border-bottom: 2px solid #6b6c6e88;
-}
-@media(max-width:720px) { .resize-handle { display: none } }
 
 .panel-content {
   height: calc(100% - 30px);
@@ -440,6 +421,15 @@ h2 {
   line-height: 1.2;
   margin: 0 0 14px;
   color: #6b85af;
+}
+
+.display-title {
+  margin: 0;
+  font-family: Pridi, serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 300;
+  line-height: 0.94;
+  letter-spacing: -0.04em;
 }
 
 h3 {
@@ -531,7 +521,7 @@ ul {
 .entry .entry-note {
   font-size: 13px;
   line-height: 1.4;
-  color: #909090;
+  color: #5c5c5c;
   margin: 4px 0 0;
   text-align: left;
 }
@@ -789,6 +779,10 @@ ul {
   margin-bottom: 10px;
 }
 
+.note--spaced {
+  margin-top: 50px;
+}
+
 .taskbar {
   display: none
 }
@@ -816,7 +810,8 @@ ul {
     inset: 28% 5% 7%
   }
 
-  h1 {
+  h1,
+  .display-title {
     font-size: clamp(2.1rem, 9vw, 3.2rem)
   }
 
@@ -1105,6 +1100,10 @@ ul {
   transition:all .2s ease;
   margin: 5px 0 5px;
   cursor: pointer;
+}
+
+div.project-card {
+  cursor: default;
 }
 
 .card-inner {
@@ -1537,4 +1536,16 @@ ul {
   .project-card:hover,
   .collage-content:hover,
   .launchers button:hover { transform: none; }
+}
+
+/* ---------- reduced motion (applies to every animation and transition) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

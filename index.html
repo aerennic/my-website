@@ -4,14 +4,19 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>meg's space</title>
+        <meta name="description" content="Megan Chau's portfolio: a third-year Computing Science student at SFU interested in web development, UI/UX and software engineering." />
+        <meta name="theme-color" content="#a0bbf3" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="meg's space" />
+        <meta property="og:description" content="Megan Chau's portfolio: projects, experience and artwork." />
+        <meta property="og:url" content="https://meganchau.com/" />
+        <meta property="og:image" content="https://meganchau.com/images/profile%20picture.png" />
+        <link rel="icon" type="image/png" href="images/site icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Pridi:wght@300;500&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Pridi:wght@300;500&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="styles.css" />
         <script src="./script.js" defer></script>
-        <link rel="icon" type="image/png" href="images/site icon.png" />
     </head>
     <body>
         <div class="boot" id="boot" aria-hidden="true">
@@ -31,33 +36,33 @@
             </button>            
             <audio id="click-audio" src="audio/click.mp3"></audio>
             <section class="home" aria-label="Welcome">
-                <img class="browser-frame" src="images/homepage folder.png" alt="Browser frame for the home section" />
+                <img class="browser-frame" src="images/homepage folder.png" alt="" />
                 <div class="home-content">
                     <h1>hi, i’m <em>megan</em></h1>
-                    <p class="status" id="status" aria-live="polite"></p>
+                    <p class="status" id="status"></p>
                     <nav class="launchers" aria-label="Portfolio sections">                                                                                 
                         <button data-open="about">
-                            <img src="images/about icon.png" alt="About icon button that opens the about panel" />
+                            <img src="images/about icon.png" alt="" />
                             <span>about</span>
                         </button>
                         <button data-open="experience">
-                            <img src="images/experience.png" alt="Experience icon button that opens the experience panel" />
+                            <img src="images/experience.png" alt="" />
                             <span>experience</span>
                         </button>
                         <button data-open="projects">
-                            <img src="images/projects.png" alt="Projects icon button that opens the projects panel" />
+                            <img src="images/projects.png" alt="" />
                             <span>projects</span>
                         </button>
                         <button data-open="contact">
-                            <img src="images/messaging.png" alt="Contact icon button that opens the contact panel" />
+                            <img src="images/messaging.png" alt="" />
                             <span>contact</span>
                         </button>
                     </nav>
                 </div>
             </section>
-            <section class="panel about" id="about">
+            <section class="panel about" id="about" role="dialog" aria-labelledby="about-title" tabindex="-1">
                 <header data-drag>
-                    <span>about</span>
+                    <span id="about-title">about</span>
                     <button data-minimize="about" aria-label="Minimize about">–</button>
                     <button data-close="about" aria-label="Close about">×</button>
                 </header>
@@ -93,7 +98,7 @@
                     <hr />
 
                     <!--More about me!!!-->
-                    <h1>ABOUT ME!</h1>
+                    <h2 class="display-title">ABOUT ME!</h2>
                     <div class="photo-collage">
                         <img class="photo-collage-image" data-key="image1" src="images/about picture 3.png" alt="A picture of me volunteering at FROSH 2025" />
                         <img class="photo-collage-image" data-key="image2" src="images/about picture 1.jpg" alt="A picture of me with my handcrafted bouquet" />
@@ -133,9 +138,9 @@
                     </p>
                 </div>
             </section>
-            <section class="panel experience" id="experience">
+            <section class="panel experience" id="experience" role="dialog" aria-labelledby="experience-title" tabindex="-1">
                 <header data-drag>
-                    <span>experience</span>
+                    <span id="experience-title">experience</span>
                     <button data-minimize="experience" aria-label="Minimize experience">–</button>
                     <button data-close="experience" aria-label="Close experience">×</button>
                 </header>
@@ -143,7 +148,8 @@
                     <h2>LEADERSHIP</h2>
                     <article>
                         <div class="job-title">
-                            <img class="work-image" src="images/CSSS logo.jpg" alt="An image of the CSSS Logo">                            <div>
+                            <img class="work-image" src="images/CSSS logo.jpg" alt="CSSS logo">
+                            <div>
                                 <h3>Treasurer</h3>
                                 <span>Computing Science Student Society</span><small>May 2026 - Present</small>
                             </div>
@@ -152,14 +158,14 @@
                     <h2>WORK EXPERIENCE</h2>
                     <article>
                         <div class="job-title">
-                            <img class="work-image" src="images/Coco Logo.png" alt="An image of the CoCo Logo">                            
+                            <img class="work-image" src="images/Coco Logo.png" alt="CoCo Fresh Tea &amp; Juice logo">                            
                             <div>
                                 <h3>Barista, Cashier</h3>
                                 <span>CoCo Fresh Tea &amp; Juice</span><small>Oct 2025 - Present</small>
                             </div>
                         </div>
                         <div class="job-title">
-                            <img class="work-image" src="images/PNE logo.jpg" alt="An image of the PNE Logo">
+                            <img class="work-image" src="images/PNE logo.jpg" alt="PNE logo">
                             <div>
                                 <h3>Ride Attendant</h3>
                                 <span>Pacific National Exhibition (PNE)</span><small>July - Sept 2025</small>
@@ -169,35 +175,35 @@
                     <h2>VOLUNTEERING</h2>
                     <article>
                         <div class="job-title">
-                            <img class="work-image" src="images/CSSS logo.jpg" alt="An image of the CSSS Logo">                            
+                            <img class="work-image" src="images/CSSS logo.jpg" alt="CSSS logo">                            
                             <div>
                                 <h3>CSSS Multimedia Team</h3>
                                 <span>Computing Science Student Society</span><small>Aug 2026 - Present</small>
                             </div>
                         </div>
                         <div class="job-title">
-                            <img class="work-image" src="images/CSSS logo.jpg" alt="An image of the CSSS Logo">                            
+                            <img class="work-image" src="images/CSSS logo.jpg" alt="CSSS logo">                            
                             <div>
                                 <h3>FROSH Leader</h3>
                                 <span>Computing Science Student Society</span><small>Oct 2025</small>
                             </div>
                         </div>
                         <div class="job-title">
-                            <img class="work-image" src="images/Shoppers Logo.png" alt="An image of the Shoppers Drug Mart Logo">                            
+                            <img class="work-image" src="images/Shoppers Logo.png" alt="Shoppers Drug Mart logo">                            
                             <div>
                                 <h3>Pharmacy Assistant</h3>
                                 <span>Shoppers Drug Mart</span><small>Oct 2023 - Nov 2023</small>
                             </div>
                         </div>                        
                         <div class="job-title">
-                            <img class="work-image" src="images/Shoppers Logo.png" alt="An image of the Shoppers Drug Mart Logo">                            
+                            <img class="work-image" src="images/Shoppers Logo.png" alt="Shoppers Drug Mart logo">                            
                             <div>
                                 <h3>Store Assistant</h3>
                                 <span>Shoppers Drug Mart</span><small>Apr 2023 - May 2023</small>
                             </div>
                         </div>
                         <div class="job-title">
-                            <img class="work-image" src="images/Placeholder Image.jpg" alt="An image of the CSSS Logo">                            
+                            <img class="work-image" src="images/Placeholder Image.jpg" alt="">                            
                             <div>
                                 <h3>Camp Leader</h3>
                                 <span>Fun Rec Day Camp</span><small>Aug 2022</small>
@@ -206,9 +212,9 @@
                     </article>
                 </div>
             </section>                
-            <section class="panel projects" id="projects">
+            <section class="panel projects" id="projects" role="dialog" aria-labelledby="projects-title" tabindex="-1">
                 <header data-drag>
-                    <span>projects</span>
+                    <span id="projects-title">projects</span>
                     <button data-minimize="projects" aria-label="Minimize projects">–</button>
                     <button data-close="projects" aria-label="Close projects">×</button>
                 </header>
@@ -225,7 +231,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <img class="card-shot" src="images/Meowmino's Start Page.png" alt="An image of Meowmino's Delivery Start Page">
+                                    <img class="card-shot" src="images/Meowmino's Start Page.png" alt="Screenshot of Meowmino's Delivery start page">
                                     <div class="card-panel"><span>A 2D arcade game where you deliver pizzas through a maze while dodging obstacles.</span></div>
                                 </div>
                             </div>
@@ -241,32 +247,36 @@
                                 </div>
                                 <div class="card-body">
                                     <img class="card-shot" src="images/Default Risk Predictor Screenshot.png" alt="Screenshot of Default Risk Predictor Home Page">
-                                    <div class="card-panel"><span>A mobile app that turns photos of tourist attractions into AI-generated stories.</span></div>
+                                    <div class="card-panel"><span>Predicts the likelihood that a home-credit applicant will default on a loan.</span></div>
                                 </div>
                             </div>
                         </a>
 
-                        <a class="project-card">
+                        <div class="project-card">
                             <div class="card-inner">
                                 <div class="card-header">
                                     <div class="card-tab"><span>Unix Shell</span></div>
-                                    <div class="card-tags"><div class="card-tag">C</div></div>
-                                    <div class="card-tags"><div class="card-tag">CMake</div></div>                                
-                                    <div class="card-tags"><div class="card-tag">POSIX System Calls</div></div>                                
+                                    <div class="card-tags">
+                                        <div class="card-tag">C</div>
+                                        <div class="card-tag">CMake</div>
+                                        <div class="card-tag">POSIX System Calls</div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <img class="card-shot" src="images/Neovim Screenshot.png" alt="Screenshot of Neovim">
                                     <div class="card-panel"><span> A fully functional command-line shell in C supporting foreground and background process execution</span></div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
-                        <a class="project-card">
+                        <div class="project-card">
                             <div class="card-inner">
                                 <div class="card-header">
                                     <div class="card-tab"><span>TCP Group Chat Server</span></div>
-                                    <div class="card-tags"><div class="card-tag">C</div></div>
-                                    <div class="card-tags"><div class="card-tag">POSIX Sockets</div></div>
+                                    <div class="card-tags">
+                                        <div class="card-tag">C</div>
+                                        <div class="card-tag">POSIX Sockets</div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <img class="card-shot" src="images/Neovim Screenshot.png" alt="Screenshot of Neovim">
@@ -274,7 +284,7 @@
 guaranteed message ordering across all peers</span></div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                         <a class="project-card" href="https://devpost.com/software/jobly-sv28xh" target="_blank" rel="noopener noreferrer">
                             <div class="card-inner">
                                 <div class="card-header">
@@ -295,9 +305,11 @@ guaranteed message ordering across all peers</span></div>
                             <div class="card-inner">
                                 <div class="card-header">
                                     <div class="card-tab"><span>Tour Story</span></div>
-                                    <div class="card-tags"><div class="card-tag">Expo</div></div>
-                                    <div class="card-tags"><div class="card-tag">TypeScript</div></div>
-                                    <div class="card-tags"><div class="card-tag">JavaScript</div></div>
+                                    <div class="card-tags">
+                                        <div class="card-tag">Expo</div>
+                                        <div class="card-tag">TypeScript</div>
+                                        <div class="card-tag">JavaScript</div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
                                     <img class="card-shot" src="images/Tour Story Screenshot.jpg" alt="Screenshot of Tour Story">
@@ -306,16 +318,14 @@ guaranteed message ordering across all peers</span></div>
                             </div>
                         </a>
                     </div>
-                    <p class="note" style="margin-top: 50px;">
+                    <p class="note note--spaced">
                         See more on <a href="https://github.com/aerennic" target="_blank" rel="noopener noreferrer">GitHub&nearr;</a>
                     </p>
-                    <!-- <h1>OTHER WORKS</h1> -->
                 </div>
-                <!-- <span class="resize-handle" data-resize aria-hidden="true"></span> -->
             </section>
-            <section class="panel contact" id="contact">
+            <section class="panel contact" id="contact" role="dialog" aria-labelledby="contact-title" tabindex="-1">
                 <header data-drag>
-                    <span>contact</span>
+                    <span id="contact-title">contact</span>
                     <button data-minimize="contact" aria-label="Minimize contact">–</button>
                     <button data-close="contact" aria-label="Close contact">×</button>
                 </header>
@@ -353,14 +363,14 @@ guaranteed message ordering across all peers</span></div>
                     </p>
                 </div>
             </section>
-            <section class="panel explore" id="explore">
+            <section class="panel explore" id="explore" role="dialog" aria-labelledby="explore-title" tabindex="-1">
                 <header data-drag>
-                    <span>explore</span>
+                    <span id="explore-title">explore</span>
                     <button data-minimize="explore" aria-label="Minimize explore">–</button>
                     <button data-close="explore" aria-label="Close explore">×</button>
                 </header>
                 <div class="panel-content">
-                    <h1>My other works!</h1>
+                    <h2 class="display-title">My other works!</h2>
                     <p>Some graphics and artworks :></p><br>
                     <section class="explore-section" id="graphics">
                         <h2>GRAPHICS</h2>
@@ -398,7 +408,7 @@ guaranteed message ordering across all peers</span></div>
                                 <figcaption>Posters for Frosh 2026! Huge credits to Amelia :3</figcaption>
                             </figure>
                                                     <figure class="graphic-item">
-                                <img class="artwork-big" src="images/art/meowmino on bike.png" alt="Meowmino Delivery character" loading="lazy">
+                                <img class="artwork-big" src="images/art/meowmino on bike.png" alt="Meowmino, the Meowmino's Delivery character, on a bike" loading="lazy">
                                 <figcaption>Meowmino's Delivery Character Design</figcaption>
                             </figure>
                             <figure class="graphic-item">
@@ -449,12 +459,12 @@ guaranteed message ordering across all peers</span></div>
             </section>
             <nav class="taskbar" id="taskbar" aria-label="Open tabs"></nav>
             <div class="desktop-buttons">
-                <a class="desktop-icon" href="https://drive.google.com/file/d/1dPqtBRgFA15nqOODikTUOhsNS0c_HohK/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open resume">
-                    <img src="images/resume icon.png" alt="Pixelated page icon" />
+                <a class="desktop-icon" href="https://drive.google.com/file/d/1dPqtBRgFA15nqOODikTUOhsNS0c_HohK/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open resume (opens in a new tab)">
+                    <img src="images/resume icon.png" alt="" />
                     <span>resume</span>
                 </a>
                 <button class="desktop-icon" data-open="explore" aria-label="Open explore">
-                    <img src="images/explore icon.png" alt="A pixelated version of the explore icon" />
+                    <img src="images/explore icon.png" alt="" />
                     <span>explore</span>
                 </button>
             </div>
